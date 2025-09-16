@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../img/favicon.ico">
+        <title>Architecture Alignment Assessment - My Docs</title>
+        <link href="../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../css/fontawesome.min.css" rel="stylesheet">
+        <link href="../css/brands.min.css" rel="stylesheet">
+        <link href="../css/solid.min.css" rel="stylesheet">
+        <link href="../css/v4-font-face.min.css" rel="stylesheet">
+        <link href="../css/base.css" rel="stylesheet">
+        <link id="hljs-light" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" >
+        <link id="hljs-dark" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github-dark.min.css" disabled>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script>hljs.highlightAll();</script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="..">My Docs</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar-collapse" aria-controls="navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="nav-item">
+                                <a href=".." class="nav-link">Solution Delivery Documentation</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../Steps/" class="nav-link">Solution Architecture Process</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="./" class="nav-link active" aria-current="page">Architecture Alignment Assessment</a>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ms-md-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-bs-toggle="modal" data-bs-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li class="nav-item">
+                                <a rel="prev" href="../Steps/" class="nav-link">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a rel="next" class="nav-link disabled">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-bs-toggle="collapse" data-bs-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-body-tertiary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-bs-level="1"><a href="#architecture-alignment-assessment" class="nav-link">Architecture Alignment Assessment</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-bs-level="2"><a href="#overview" class="nav-link">Overview</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#requirements" class="nav-link">Requirements</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<h1 id="architecture-alignment-assessment">Architecture Alignment Assessment</h1>
+<ul>
+<li>Overview</li>
+<li>Requirements</li>
+<li>Alignment Legend</li>
+<li>Requirements Evaluated</li>
+</ul>
+<h2 id="overview">Overview</h2>
+<p>In order to ensure alignment with enterprise and local standards for the products or solutions being developed at a subsidary entity a local auditing process is required. The audit will be conducted by the local architecture team. It is also an opportunity for having local architects review the design and implementation of the solution to provide feedback, identify potential issues, and suggest improvements.</p>
+<h2 id="requirements">Requirements</h2>
+<h3 id="alignment-legend">Alignment Legend</h3>
+<table>
+<thead>
+<tr>
+<th>ALIGNMENT</th>
+<th>MEANING</th>
+<th>VALUE</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>FULL</td>
+<td>The expected architecture outputs exist. Expectation has been met.</td>
+<td>2</td>
+</tr>
+<tr>
+<td>PARTIAL</td>
+<td>Some of the expected architecture outputs exist. Expectation minimally has been met.</td>
+<td>1</td>
+</tr>
+<tr>
+<td>NONE</td>
+<td>No evidence of the expected architecture outputs. Expectation have not been met.</td>
+<td>0</td>
+</tr>
+</tbody>
+</table>
+<h3 id="requirements-evaluated">Requirements Evaluated</h3>
+<h4 id="architecture-process-cross-referencing">ARCHITECTURE PROCESS (cross referencing)</h4>
+<p><strong>ANALYSIS-01</strong>: Domain Architecture Alignment<br />
+<em>Is this an existing solution, a net new solution, a solution migration, or other? Checking here for the High Level Design being aligned to the business domain.</em><br />
+- Where: High Level Design Diagram<br />
+- Architecture: Solution Architecture<br />
+- Activity: Design Overall Solution<br />
+- Outputs:
+  - Overall Solution Architecture</p>
+<p><strong>ANALYSIS-02</strong>: Gap Analysis<br />
+<em>Is there a definition of the discrepancies between the current and desired state? Is this an innovation and is there intellectual property associated with this solution? Looking for a value statement on a Lean Canvas.</em><br />
+- Where: Lean Canvas Slide<br />
+- Architecture: Solution Architecture<br />
+- Activity: Assess Strategic Architecture Gateway<br />
+- Tasks:
+  - Understand Business Context
+  - Understand Overall Value Streams
+  - Understand Innovation and Intellectual Property for CGSI<br />
+- Outputs:
+  - Strategic Architecture Acceptance (or Lean Canvas)
+  - Innovation and Intellectual Property Proposal (if applicable)</p>
+<p><strong>ANALYSIS-03</strong>: Non-Functional Requirements<br />
+<em>Non-Functional Requirements are documented.</em><br />
+Simple NFR Template from SAFE Arch:<br />
+<a href="https://scaledagileframework.com/nonfunctional-requirements/">https://scaledagileframework.com/nonfunctional-requirements/</a></p>
+<pre><code>Name: &lt;&lt; quality.sub-quality &gt;&gt;
+Scale: &lt;&lt; units &gt;&gt;
+Meter: &lt;&lt; measurement method &gt;&gt;
+Target: &lt;&lt; success level &gt;&gt;
+Constraint: &lt;&lt; failure level &gt;&gt;
+Baseline: &lt;&lt; current level &gt;&gt;
+</code></pre>
+<p><strong>Example NFR</strong></p>
+<pre><code>Name: Performance - Efficiency
+Scale: Number of Claims Per Second (CPS)
+Meter: Average request / response time
+Target: 200 claims per second
+Constraint: &lt;100 claims per second
+Baseline: 100 claims per second
+</code></pre>
+<ul>
+<li>Where: Confluence or Jira  </li>
+<li>Architecture: Application Architecture  </li>
+<li>Activity: Manage Risks and NFR's  </li>
+<li>Outputs:</li>
+<li>NFR's Management Plan</li>
+<li>Risk Mitigation Plan</li>
+</ul>
+<hr />
+<p><strong>VISION-01</strong>: Architectural Principles<br />
+Architectural Guiding Principles (Enterprise) being followed:<br />
+1. Reuse<br />
+2. Microservices<br />
+3. Event based Architectures<br />
+4. Loose coupling/Tightly Cohesive<br />
+- Evidence: Adhoc<br />
+- Activity: Design Overall Solution<br />
+- Tasks:
+  - Decompose Solution in Modules<br />
+- Outputs:
+  - Overall Solution Architecture
+  - Application Architecture
+  - Data Architecture</p>
+<p><strong>VISION-02</strong>: Stakeholder Map<br />
+- What to Check: Identify stakeholders, their influence, and key questions or concerns<br />
+- Where: Confluence<br />
+- Activity: Manage Stakeholders<br />
+- Outputs:
+  - Stakeholder Communication Plan</p>
+<p><strong>VISION-03</strong>: Value Chain<br />
+- What to Check: High-level organisational and functional context<br />
+- Where: Value Chain Diagram<br />
+- Activity: Design Overall Solution<br />
+- Tasks:
+  - Fulfil Overall Value Streams</p>
+<p><strong>VISION-04</strong>: Solution Concept<br />
+- What to Check: Future state High Level Design<br />
+- Where: High Level Design Diagram<br />
+- Activity: Assess Strategic Architecture Gateway<br />
+- Tasks:
+  - Understand Business Context<br />
+- Outputs:
+  - Strategic Architecture Acceptance</p>
+<hr />
+<p><strong>BUSINESS-01</strong>: Business Controls<br />
+Business policy areas as applicable:</p>
+<pre><code>- Security
+- Data protection
+- Availability
+- Change management
+- Incident management
+- Accessibility
+- Compliance
+- Business Continuity/DR
+- Vendor management
+- Knowledge management
+- Quality assurance
+- Service level agreements
+- Budget and cost management
+- Intellectual property
+</code></pre>
+<ul>
+<li>Where:  ITSM, CHG Tickets, DR Plan  </li>
+<li>Architecture: Application Architecture  </li>
+<li>Activity: Design Overall Solution  </li>
+<li>Tasks:</li>
+<li>Review Adherence to Enterprise Standards</li>
+</ul>
+<hr />
+<p><strong>DATA-01</strong>: Data Security<br />
+- What to Check: PHI/PII/PFI/GDPR, regulatory requirements, protection<br />
+- Where: Cloud Infra reviews, Enterprise Policicies 
+- Activity: Submit for Security Review<br />
+- Tasks:
+  - Submit Data Governance Report<br />
+- Outputs:
+  - Security Architecture Report</p>
+<p><strong>DATA-02</strong>: Enterprise Data Firewall<br />
+- What to Check: Documented approach<br />
+- Activity: Submit for Security Review<br />
+- Outputs:
+  - Data Governance Report</p>
+<p><strong>DATA-03</strong>: Data Flow<br />
+- What to Check: Data flow diagram, schema, versioning/change management<br />
+- Where: Data Flow Diagram<br />
+- Activity: Design Overall Solution<br />
+- Outputs:
+  - Data Architecture</p>
+<hr />
+<p><strong>SEC-01</strong>: Access Control<br />
+- What to Check: CISO - RBAC/PBAC/ABAC concerns<br />
+- Where: Security Matrix<br />
+- Activity: Submit for Security Review<br />
+- Outputs:
+  - Security Architecture Report</p>
+<hr />
+<p><strong>APPLICATION-01</strong>: Application Registration<br />
+- What to Check: Enterprise Application Management
+- Where: Application Identifiers<br />
+- Activity: Manage Product Platform<br />
+- Tasks:
+  - Tag and Register Application<br />
+- Outputs:
+  - Application ID(s)</p>
+<p><strong>APPLICATION-02</strong>: API Specifications<br />
+- What to Check: Swagger/OpenAPI, Interface Catalog<br />
+- Where: API Specs<br />
+- Architecture: Application Architecture<br />
+- Activity: Design Features Solution Intent<br />
+- Outputs:
+  - Feature Solution Design Document</p>
+<p><strong>APPLICATION-03</strong>: CI/CD<br />
+- What to Check: CI/CD setup, automation, testing<br />
+- Where: Bamboo, EHDS, SonarCube, CheckMarx<br />
+- Architecture: Application Architecture<br />
+- Activity: Manage Product Platform<br />
+- Outputs:
+  - CICD Pipeline
+  - DevOps Playbook
+  - Test Automation Scripts
+  - DevOps Infrastructure as Code</p>
+<p><strong>APPLICATION-04</strong>: Technology Matrix<br />
+- What to Check: Tech stack documentation<br />
+- Where: Confluence<br />
+- Architecture: Technical Architecture<br />
+- Activity: Design Overall Solution<br />
+- Outputs:
+  - Overall/Application Architecture</p>
+<p><strong>APPLICATION-05</strong>: Performance<br />
+- What to Check: Performance test reports<br />
+- Where: Test Reports<br />
+- Architecture: Application Architecture<br />
+- Activity: Manage Product Platform<br />
+- Tasks:
+  - Support Performance Engineering</p>
+<p><strong>APPLICATION-06</strong>: Architectural Artifacts<br />
+- What to Check: Maintained architecture documents<br />
+- Where: Confluence<br />
+- Activity: Design Overall Solution<br />
+- Outputs:
+  - Overall Solution Architecture</p>
+<p><strong>APPLICATION-07</strong>: Reference Architecture Patterns</p>
+<ul>
+<li>What to Check: Reference Patterns</li>
+<li>Where: Eneterprise Reference Pattern Library</li>
+<li>Activity: Design Overall Solution  </li>
+<li>Outputs: Overall Solution Architecture</li>
+</ul>
+<p><strong>APPLICATION-08</strong>: Application Security<br />
+- What to Check: Vulnerability scan results<br />
+- Where: Prisma<br />
+- Activity: Manage Product Platform<br />
+- Tasks:
+  - Monitor and Manage Violations<br />
+- Outputs:
+  - Security Scan Reports</p>
+<p><strong>APPLICATION-09</strong>: Observability and Monitoring<br />
+- What to Check: Logs, dashboards, tracing<br />
+- Where: Splunk, Datadog<br />
+- Activity: Manage Product Platform<br />
+- Outputs:
+  - Dashboards / Logs / Traces</p>
+<p><strong>APPLICATION-10</strong>: Architecture Decision Records<br />
+- Where: Application Documentation 
+- Activity: Manage Architecture Decisions<br />
+- Outputs:
+  - ADRs</p>
+<p><strong>APPLICATION-11</strong>: BCM Mapping (Level 1)<br />
+- Where:  Application Documentation 
+- Activity: Assess Strategic Architecture Gateway<br />
+- Tasks:
+  - Understand Business Context<br />
+- Outputs:
+  - Strategic Architecture Acceptance</p>
+<p><strong>APPLICATION-12</strong>: Value Stream Mapping (Level 1)<br />
+- Where: Application Documentation<br />
+- Activity: Design Overall Solution<br />
+- Tasks:
+  - Fulfil Value Streams</p>
+<hr />
+<p><strong>TECHNOLOGY-01</strong>: <br />
+- What to Check: Tech stack compliance<br />
+- Where: Enterprise Technology Repository (If Exists)
+- Activity: Manage Architecture Decisions<br />
+- Outputs:
+  - ADRs<br />
+- Additional Activity: Design Overall Solution<br />
+- Tasks:
+  - Review Adherence to Standards</p>
+<p><strong>TECHNOLOGY-02</strong>: Environment Management<br />
+- What to Check: Environment setups (DEV/SIT/UAT/PERF/PROD)<br />
+- Where: Environment RACI <br />
+- Activity: Manage Product Platform<br />
+- Tasks:
+  - Optimise Product Resources</p></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script src="../js/bootstrap.bundle.min.js"></script>
+        <script>
+            var base_url = "..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../js/base.js"></script>
+        <script src="../search/main.js"></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p>From here you can search these documents. Enter your search terms below.</p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results" data-no-results-text="No results found"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>
