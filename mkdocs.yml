@@ -1,4 +1,6 @@
 site_name: Solution Delivery
+theme:
+  name: material
 Nav:
 -Home: index.md
 -Steps : steps.md 
