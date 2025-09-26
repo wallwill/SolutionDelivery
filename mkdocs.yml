@@ -1,6 +1,6 @@
 site_name: Solution Delivery
 Nav:
 -Home: index.md
--Steps : Steps.md 
+-Steps : steps.md 
 -Assessment : assessment.md
 -Diagrams :  diagrams.md
