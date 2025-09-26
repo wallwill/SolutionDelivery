@@ -1,1 +1,6 @@
-site_name: My Docs
+site_name: Solution Delivery
+Nav:
+-Home: index.md
+-Steps : Steps.md 
+-Assessment : assessment.md
+-Diagrams :  diagrams.md
