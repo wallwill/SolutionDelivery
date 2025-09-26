@@ -1,5 +1,5 @@
 
-# Enterprise Templates 
+# Diagram Standards
 
 Inherit any Enterprise standards. However, these standards are often high-level, and implementation teams require more granularity with respect to standards and guidelines.
 
