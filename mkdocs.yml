@@ -3,7 +3,9 @@ theme:
   name: material
 Nav:
 -Home: index.md
--Steps : steps.md 
+-Process : process.md 
 -Assessment : assessment.md
 -Diagrams :  diagrams.md
 -Communications : communications.md
+-Duties: duties.md
+-Adrs: adrs.md
