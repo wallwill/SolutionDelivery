@@ -1,0 +1,528 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../duties/">
+      
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.14">
+    
+    
+      
+        <title>Solution Architecture Process - Solution Delivery</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.342714a4.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#solution-architecture-process" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="Solution Delivery" class="md-header__button md-logo" aria-label="Solution Delivery" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Solution Delivery
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Solution Architecture Process
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Solution Delivery" class="md-nav__button md-logo" aria-label="Solution Delivery" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Solution Delivery
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Solution Delivery Documentation
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../adrs/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Decision Records
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../assesment/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Scoring Criteria for Peer Review
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../communications/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Communications
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../diagrams/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Diagram Standards
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../duties/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Scope and Responsibilities - General
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    Solution Architecture Process
+    
+  </span>
+  
+
+      </a>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="solution-architecture-process">Solution Architecture Process</h1>
+<ul>
+<li><a href="#overview">Overview</a></li>
+<li><a href="#solution-architecture-delivery-process">Solution Architecture Delivery Process</a></li>
+<li><a href="#overview-solution-delivery-macro-process">Overview: Solution Delivery Macro Process</a></li>
+<li><a href="#phase-solution-intake-process">Phase: Solution Intake Process</a></li>
+<li><a href="#phase-solution-architecture-elaboration">Phase: Solution Architecture Elaboration</a><ul>
+<li><a href="#activity-e1---assess-strategic-architecture-gateway">Activity: E1 - Assess Strategic Architecture Gateway</a><ul>
+<li><a href="#task-01---assess-ea-inputs">Task: 01 - Assess EA Inputs</a></li>
+<li><a href="#task-02---understand-overall-value-streams">Task: 02 - Understand Overall Value Streams</a></li>
+<li><a href="#task-03---understand-business-context">Task: 03 - Understand Business Context</a></li>
+<li><a href="#task-04---understand-technical-landscape">Task: 04 - Understand Technical Landscape</a></li>
+<li><a href="#task-05---assess-innovation-and-ip-value">Task: 05 - Assess Innovation and IP value</a></li>
+</ul>
+</li>
+<li><a href="#activity-e2---design-overall-solution">Activity: E2 - Design Overall Solution</a><ul>
+<li><a href="#task-01---decompose-solution-in-modules">Task: 01 - Decompose Solution in Modules</a></li>
+<li><a href="#task-02---detail-overall-value-streams">Task: 02 - Detail Overall Value Streams</a></li>
+<li><a href="#task-03---refine-overall-solution-design">Task: 03 - Refine Overall Solution Design</a></li>
+<li><a href="#task-04---design-application-architecture">Task: 04 - Design Application Architecture</a></li>
+<li><a href="#task-05---design-data-architecture">Task: 05 - Design Data Architecture</a></li>
+<li><a href="#task-06---review-adherence-to-enterprise-standards">Task: 06 - Review Adherence to Enterprise Standards</a></li>
+<li><a href="#task-07---propose-spikes--technical-enablers">Task: 07 - Propose Spikes / Technical Enablers</a></li>
+</ul>
+</li>
+<li><a href="#activity-e3---manage-stakeholders-communication">Activity: E3 - Manage Stakeholders Communication</a><ul>
+<li><a href="#task-01---gather-stakeholder-list">Task: 01 - Gather Stakeholder List</a></li>
+<li><a href="#task-02---establish-approval-chains">Task: 02 - Establish Approval Chains</a></li>
+<li><a href="#task-03---establish-communication-channels">Task: 03 - Establish Communication Channels</a></li>
+</ul>
+</li>
+<li><a href="#activity-e4---manage-architecture-decisions">Activity: E4 - Manage Architecture Decisions</a><ul>
+<li><a href="#task-01---propose-detail-or-approve-adrs">Task: 01 - Propose, Detail or Approve ADR's</a></li>
+</ul>
+</li>
+<li><a href="#activity-e5---manage-risks-and-nfrs">Activity: E5 - Manage Risks and NFR's</a><ul>
+<li><a href="#task-01---manage-risks">Task: 01 - Manage Risks</a></li>
+<li><a href="#task-02---assess-nfrs">Task: 02 - Assess NFRs</a></li>
+<li><a href="#task-03---propose-spikes--technical-enablers--adrs">Task: 03 - Propose Spikes / Technical Enablers /ADR's</a></li>
+</ul>
+</li>
+<li><a href="#activity-e6---manage-product-platform">Activity: E6 - Manage Product Platform</a><ul>
+<li><a href="#task-01---support-ci--cd">Task: 01 - Support CI / CD</a></li>
+<li><a href="#task-02---support-and-coordinate-observability">Task: 02 - Support and Coordinate Observability</a></li>
+<li><a href="#task-03---coordinate-with-devops">Task: 03 - Coordinate with Devops</a></li>
+<li><a href="#task-04---support-test-automation">Task: 04 - Support Test Automation</a></li>
+<li><a href="#task-05---optimise-product-resources">Task: 05 - Optimise Product Resources</a></li>
+<li><a href="#task-06---support-performance-engineering">Task: 06 - Support Performance Engineering</a></li>
+<li><a href="#task-07---propose-spikes--technical-enablers--adrs">Task: 07 - Propose Spikes / Technical Enablers /ADR's</a></li>
+<li><a href="#task-08---tag-and-register-application-in-platform-management-repos">Task: 08 - Tag and Register Application in Platform Management Repos</a></li>
+<li><a href="#task-09---monitor-and-manage-application-vulnerabilities">Task: 09 - Monitor and Manage Application Vulnerabilities</a></li>
+</ul>
+</li>
+<li><a href="#activity-e7---manage-product-security-and-compliance">Activity: E7 - Manage Product Security and Compliance</a><ul>
+<li><a href="#task-01---submit-security-architect-report">Task: 01 - Submit Security Architect Report</a></li>
+<li><a href="#task-02---submit-data-governance-report">Task: 02 - Submit Data Governance Report</a></li>
+<li><a href="#task-03---submit-data-encryption-report">Task: 03 - Submit Data Encryption Report</a></li>
+<li><a href="#task-04---submit-disaster-recovery-report">Task: 04 - Submit Disaster Recovery Report</a></li>
+<li><a href="#task-05---submit-user-lifecycle-management-report">Task: 05 - Submit User Lifecycle Management Report</a></li>
+<li><a href="#task-06---submit-ai-report">Task: 06 - Submit AI Report</a></li>
+<li><a href="#task-07---submit-application-security-report">Task: 07 - Submit Application Security Report</a></li>
+<li><a href="#task-08---submit-change-management-report">Task: 08 - Submit Change Management Report</a></li>
+<li><a href="#task-09---submit-sdlc-report">Task: 09 - Submit SDLC Report</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#phase-feature-solution-delivery-process">Phase: Feature Solution Delivery Process</a><ul>
+<li><a href="#activity-f1---design-feature-solution-intent">Activity: F1 - Design Feature Solution Intent</a><ul>
+<li><a href="#task-01---run-impact-analysis">Task: 01 - Run Impact Analysis</a></li>
+<li><a href="#task-02---collaborate-with-po-on-system-use-cases--ac">Task: 02 - Collaborate with PO on System Use Cases / A/C</a></li>
+<li><a href="#task-03---collaborate-with-application-architect--tech-leaders">Task: 03 - Collaborate with Application Architect / Tech Leaders</a></li>
+<li><a href="#task-04---collaborate-with-ux-designers">Task: 04 - Collaborate with UX Designers</a></li>
+<li><a href="#task-05---address-nfrs">Task: 05 - Address NFR's</a></li>
+<li><a href="#task-06---verify-adherence-to-enterprise-standards">Task: 06 - Verify Adherence to Enterprise Standards</a></li>
+<li><a href="#task-07---review-and-sign-off-application-architecture">Task: 07 - Review and Sign Off Application Architecture</a></li>
+<li><a href="#task-08---propose-spikes--technical-enablers--adrs">Task: 08 - Propose Spikes / Technical Enablers /ADR's</a></li>
+</ul>
+</li>
+<li><a href="#activity-f2---manage-stakeholders">Activity: F2 - Manage Stakeholders</a></li>
+<li><a href="#activity-f3---manage-architecture-decisions">Activity: F3 - Manage Architecture Decisions</a></li>
+<li><a href="#activity-f4---risks-and-nfrs">Activity: F4 - Risks and NFR's</a></li>
+<li><a href="#activity-f5---manage-product-platform">Activity: F5 - Manage Product Platform</a></li>
+<li><a href="#activity-f6---submit-application-for-security-review">Activity: F6 - Submit Application for Security Review</a></li>
+</ul>
+</li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "..", "features": [], "search": "../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.13a4f30d.min.js"></script>
+      
+    
+  </body>
+</html>
