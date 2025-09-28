@@ -14,7 +14,7 @@ This page will be a living document that advocates for diagrams we will produce 
 
 ## Diagram Families
 
-Selecting the right diagram is a skill in itself. There are several diagram families to choose from. The most frequently used are listed below. Here in CGS Ireland, we rely on the skill of our architects to judge the right diagram type for the right audience that conveys the right level of information at the right time. (See 4 R's above)
+Selecting the right diagram is a skill in itself. There are several diagram families to choose from. The most frequently used are listed below. Hopefully you can rely on the skill of your architects to judge the right diagram type for the right audience that conveys the right level of information at the right time. (See 4 R's above)
 
 **Note:** This is not meant to be a prescriptive list, but rather a listing of the most frequently used diagrams.
 
