@@ -12,6 +12,8 @@
         <link rel="prev" href="../duties/">
       
       
+        <link rel="next" href="../solintent/">
+      
       
       <link rel="icon" href="../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.14">
@@ -219,7 +221,7 @@
   
   
   <span class="md-ellipsis">
-    Decision Records
+    Architecture Decision Records
     
   </span>
   
@@ -349,6 +351,28 @@
   
 
     
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../solintent/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Solution Intent Template
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
   </ul>
 </nav>
                   </div>
@@ -385,88 +409,88 @@
 
 <h1 id="solution-architecture-process">Solution Architecture Process</h1>
 <ul>
-<li><a href="#overview">Overview</a></li>
-<li><a href="#solution-architecture-delivery-process">Solution Architecture Delivery Process</a></li>
-<li><a href="#overview-solution-delivery-macro-process">Overview: Solution Delivery Macro Process</a></li>
-<li><a href="#phase-solution-intake-process">Phase: Solution Intake Process</a></li>
-<li><a href="#phase-solution-architecture-elaboration">Phase: Solution Architecture Elaboration</a><ul>
-<li><a href="#activity-e1---assess-strategic-architecture-gateway">Activity: E1 - Assess Strategic Architecture Gateway</a><ul>
-<li><a href="#task-01---assess-ea-inputs">Task: 01 - Assess EA Inputs</a></li>
-<li><a href="#task-02---understand-overall-value-streams">Task: 02 - Understand Overall Value Streams</a></li>
-<li><a href="#task-03---understand-business-context">Task: 03 - Understand Business Context</a></li>
-<li><a href="#task-04---understand-technical-landscape">Task: 04 - Understand Technical Landscape</a></li>
-<li><a href="#task-05---assess-innovation-and-ip-value">Task: 05 - Assess Innovation and IP value</a></li>
+<li>Overview</li>
+<li>Solution Architecture Delivery Process</li>
+<li>Overview: Solution Delivery Macro Process</li>
+<li>Phase: Solution Intake Process</li>
+<li>Phase: Solution Architecture Elaboration<ul>
+<li>Activity: E1 - Assess Strategic Architecture Gateway<ul>
+<li>Task: 01 - Assess EA Inputs</li>
+<li>Task: 02 - Understand Overall Value Streams</li>
+<li>Task: 03 - Understand Business Context</li>
+<li>Task: 04 - Understand Technical Landscape</li>
+<li>Task: 05 - Assess Innovation and IP value</li>
 </ul>
 </li>
-<li><a href="#activity-e2---design-overall-solution">Activity: E2 - Design Overall Solution</a><ul>
-<li><a href="#task-01---decompose-solution-in-modules">Task: 01 - Decompose Solution in Modules</a></li>
-<li><a href="#task-02---detail-overall-value-streams">Task: 02 - Detail Overall Value Streams</a></li>
-<li><a href="#task-03---refine-overall-solution-design">Task: 03 - Refine Overall Solution Design</a></li>
-<li><a href="#task-04---design-application-architecture">Task: 04 - Design Application Architecture</a></li>
-<li><a href="#task-05---design-data-architecture">Task: 05 - Design Data Architecture</a></li>
-<li><a href="#task-06---review-adherence-to-enterprise-standards">Task: 06 - Review Adherence to Enterprise Standards</a></li>
-<li><a href="#task-07---propose-spikes--technical-enablers">Task: 07 - Propose Spikes / Technical Enablers</a></li>
+<li>Activity: E2 - Design Overall Solution<ul>
+<li>Task: 01 - Decompose Solution in Modules</li>
+<li>Task: 02 - Detail Overall Value Streams</li>
+<li>Task: 03 - Refine Overall Solution Design</li>
+<li>Task: 04 - Design Application Architecture</li>
+<li>Task: 05 - Design Data Architecture</li>
+<li>Task: 06 - Review Adherence to Enterprise Standards</li>
+<li>Task: 07 - Propose Spikes / Technical Enablers</li>
 </ul>
 </li>
-<li><a href="#activity-e3---manage-stakeholders-communication">Activity: E3 - Manage Stakeholders Communication</a><ul>
-<li><a href="#task-01---gather-stakeholder-list">Task: 01 - Gather Stakeholder List</a></li>
-<li><a href="#task-02---establish-approval-chains">Task: 02 - Establish Approval Chains</a></li>
-<li><a href="#task-03---establish-communication-channels">Task: 03 - Establish Communication Channels</a></li>
+<li>Activity: E3 - Manage Stakeholders Communication<ul>
+<li>Task: 01 - Gather Stakeholder List</li>
+<li>Task: 02 - Establish Approval Chains</li>
+<li>Task: 03 - Establish Communication Channels</li>
 </ul>
 </li>
-<li><a href="#activity-e4---manage-architecture-decisions">Activity: E4 - Manage Architecture Decisions</a><ul>
-<li><a href="#task-01---propose-detail-or-approve-adrs">Task: 01 - Propose, Detail or Approve ADR's</a></li>
+<li>Activity: E4 - Manage Architecture Decisions<ul>
+<li>Task: 01 - Propose, Detail or Approve ADR's</li>
 </ul>
 </li>
-<li><a href="#activity-e5---manage-risks-and-nfrs">Activity: E5 - Manage Risks and NFR's</a><ul>
-<li><a href="#task-01---manage-risks">Task: 01 - Manage Risks</a></li>
-<li><a href="#task-02---assess-nfrs">Task: 02 - Assess NFRs</a></li>
-<li><a href="#task-03---propose-spikes--technical-enablers--adrs">Task: 03 - Propose Spikes / Technical Enablers /ADR's</a></li>
+<li>Activity: E5 - Manage Risks and NFR's<ul>
+<li>Task: 01 - Manage Risks</li>
+<li>Task: 02 - Assess NFRs</li>
+<li>Task: 03 - Propose Spikes / Technical Enablers / ADR's</li>
 </ul>
 </li>
-<li><a href="#activity-e6---manage-product-platform">Activity: E6 - Manage Product Platform</a><ul>
-<li><a href="#task-01---support-ci--cd">Task: 01 - Support CI / CD</a></li>
-<li><a href="#task-02---support-and-coordinate-observability">Task: 02 - Support and Coordinate Observability</a></li>
-<li><a href="#task-03---coordinate-with-devops">Task: 03 - Coordinate with Devops</a></li>
-<li><a href="#task-04---support-test-automation">Task: 04 - Support Test Automation</a></li>
-<li><a href="#task-05---optimise-product-resources">Task: 05 - Optimise Product Resources</a></li>
-<li><a href="#task-06---support-performance-engineering">Task: 06 - Support Performance Engineering</a></li>
-<li><a href="#task-07---propose-spikes--technical-enablers--adrs">Task: 07 - Propose Spikes / Technical Enablers /ADR's</a></li>
-<li><a href="#task-08---tag-and-register-application-in-platform-management-repos">Task: 08 - Tag and Register Application in Platform Management Repos</a></li>
-<li><a href="#task-09---monitor-and-manage-application-vulnerabilities">Task: 09 - Monitor and Manage Application Vulnerabilities</a></li>
+<li>Activity: E6 - Manage Product Platform<ul>
+<li>Task: 01 - Support CI / CD</li>
+<li>Task: 02 - Support and Coordinate Observability</li>
+<li>Task: 03 - Coordinate with DevOps</li>
+<li>Task: 04 - Support Test Automation</li>
+<li>Task: 05 - Optimise Product Resources</li>
+<li>Task: 06 - Support Performance Engineering</li>
+<li>Task: 07 - Propose Spikes / Technical Enablers / ADR's</li>
+<li>Task: 08 - Tag and Register Application in Platform Management Repos</li>
+<li>Task: 09 - Monitor and Manage Application Vulnerabilities</li>
 </ul>
 </li>
-<li><a href="#activity-e7---manage-product-security-and-compliance">Activity: E7 - Manage Product Security and Compliance</a><ul>
-<li><a href="#task-01---submit-security-architect-report">Task: 01 - Submit Security Architect Report</a></li>
-<li><a href="#task-02---submit-data-governance-report">Task: 02 - Submit Data Governance Report</a></li>
-<li><a href="#task-03---submit-data-encryption-report">Task: 03 - Submit Data Encryption Report</a></li>
-<li><a href="#task-04---submit-disaster-recovery-report">Task: 04 - Submit Disaster Recovery Report</a></li>
-<li><a href="#task-05---submit-user-lifecycle-management-report">Task: 05 - Submit User Lifecycle Management Report</a></li>
-<li><a href="#task-06---submit-ai-report">Task: 06 - Submit AI Report</a></li>
-<li><a href="#task-07---submit-application-security-report">Task: 07 - Submit Application Security Report</a></li>
-<li><a href="#task-08---submit-change-management-report">Task: 08 - Submit Change Management Report</a></li>
-<li><a href="#task-09---submit-sdlc-report">Task: 09 - Submit SDLC Report</a></li>
+<li>Activity: E7 - Manage Product Security and Compliance<ul>
+<li>Task: 01 - Submit Security Architect Report</li>
+<li>Task: 02 - Submit Data Governance Report</li>
+<li>Task: 03 - Submit Data Encryption Report</li>
+<li>Task: 04 - Submit Disaster Recovery Report</li>
+<li>Task: 05 - Submit User Lifecycle Management Report</li>
+<li>Task: 06 - Submit AI Report</li>
+<li>Task: 07 - Submit Application Security Report</li>
+<li>Task: 08 - Submit Change Management Report</li>
+<li>Task: 09 - Submit SDLC Report</li>
 </ul>
 </li>
 </ul>
 </li>
-<li><a href="#phase-feature-solution-delivery-process">Phase: Feature Solution Delivery Process</a><ul>
-<li><a href="#activity-f1---design-feature-solution-intent">Activity: F1 - Design Feature Solution Intent</a><ul>
-<li><a href="#task-01---run-impact-analysis">Task: 01 - Run Impact Analysis</a></li>
-<li><a href="#task-02---collaborate-with-po-on-system-use-cases--ac">Task: 02 - Collaborate with PO on System Use Cases / A/C</a></li>
-<li><a href="#task-03---collaborate-with-application-architect--tech-leaders">Task: 03 - Collaborate with Application Architect / Tech Leaders</a></li>
-<li><a href="#task-04---collaborate-with-ux-designers">Task: 04 - Collaborate with UX Designers</a></li>
-<li><a href="#task-05---address-nfrs">Task: 05 - Address NFR's</a></li>
-<li><a href="#task-06---verify-adherence-to-enterprise-standards">Task: 06 - Verify Adherence to Enterprise Standards</a></li>
-<li><a href="#task-07---review-and-sign-off-application-architecture">Task: 07 - Review and Sign Off Application Architecture</a></li>
-<li><a href="#task-08---propose-spikes--technical-enablers--adrs">Task: 08 - Propose Spikes / Technical Enablers /ADR's</a></li>
+<li>Phase: Feature Solution Delivery Process (ITERATIVE)<ul>
+<li>Activity: F1 - Design Feature Solution Intent<ul>
+<li>Task: 01 - Run Impact Analysis</li>
+<li>Task: 02 - Collaborate with PO on System Use Cases / A/C</li>
+<li>Task: 03 - Collaborate with Application Architect / Tech Leaders</li>
+<li>Task: 04 - Collaborate with UX Designers</li>
+<li>Task: 05 - Address NFR's</li>
+<li>Task: 06 - Verify Adherence to Enterprise Standards</li>
+<li>Task: 07 - Review and Sign Off Application Architecture</li>
+<li>Task: 08 - Propose Spikes / Technical Enablers / ADR's</li>
 </ul>
 </li>
-<li><a href="#activity-f2---manage-stakeholders">Activity: F2 - Manage Stakeholders</a></li>
-<li><a href="#activity-f3---manage-architecture-decisions">Activity: F3 - Manage Architecture Decisions</a></li>
-<li><a href="#activity-f4---risks-and-nfrs">Activity: F4 - Risks and NFR's</a></li>
-<li><a href="#activity-f5---manage-product-platform">Activity: F5 - Manage Product Platform</a></li>
-<li><a href="#activity-f6---submit-application-for-security-review">Activity: F6 - Submit Application for Security Review</a></li>
+<li>Activity: F2 - Manage Stakeholders</li>
+<li>Activity: F3 - Manage Architecture Decisions</li>
+<li>Activity: F4 - Risks and NFR's</li>
+<li>Activity: F5 - Manage Product Platform</li>
+<li>Activity: F6 - Submit Application for Security Review</li>
 </ul>
 </li>
 </ul>
