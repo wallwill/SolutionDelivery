@@ -1,6 +1,6 @@
 ## Objectives Alignment
 
-Ensure alignment of communication efforts with the overarching goals of the Architecture Ireland group, focusing on promoting alignment between business and technology strategies and facilitating efficient solution delivery, while considering the global audience's needs.
+Ensure alignment of communication efforts with the overarching goals of focusing on promoting alignment between business and technology strategies and facilitating efficient solution delivery, while considering the global audience's needs.
 
 ## Audience Segmentation
 
