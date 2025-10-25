@@ -1,448 +1,1589 @@
-<!DOCTYPE html>
-<html lang="en" data-bs-theme="light">
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        
-        
-        
-        <link rel="shortcut icon" href="../img/favicon.ico">
-        <title>Architecture Alignment Assessment - My Docs</title>
-        <link href="../css/bootstrap.min.css" rel="stylesheet">
-        <link href="../css/fontawesome.min.css" rel="stylesheet">
-        <link href="../css/brands.min.css" rel="stylesheet">
-        <link href="../css/solid.min.css" rel="stylesheet">
-        <link href="../css/v4-font-face.min.css" rel="stylesheet">
-        <link href="../css/base.css" rel="stylesheet">
-        <link id="hljs-light" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" >
-        <link id="hljs-dark" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github-dark.min.css" disabled>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
-        <script>hljs.highlightAll();</script> 
-    </head>
 
-    <body>
-        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
-            <div class="container">
-                <a class="navbar-brand" href="..">My Docs</a>
-                <!-- Expander button -->
-                <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar-collapse" aria-controls="navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../adrs/">
+      
+      
+        <link rel="next" href="../cloudArch/">
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.14">
+    
+    
+      
+        <title>Scoring Criteria for Peer Review - Solution Delivery</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.342714a4.min.css">
+      
+      
 
-                <!-- Expanded navigation -->
-                <div id="navbar-collapse" class="navbar-collapse collapse">
-                        <!-- Main navigation -->
-                        <ul class="nav navbar-nav">
-                            <li class="nav-item">
-                                <a href=".." class="nav-link">Solution Delivery Documentation</a>
-                            </li>
-                            <li class="nav-item">
-                                <a href="../Steps/" class="nav-link">Solution Architecture Process</a>
-                            </li>
-                            <li class="nav-item">
-                                <a href="./" class="nav-link active" aria-current="page">Architecture Alignment Assessment</a>
-                            </li>
-                        </ul>
-
-                    <ul class="nav navbar-nav ms-md-auto">
-                        <li class="nav-item">
-                            <a href="#" class="nav-link" data-bs-toggle="modal" data-bs-target="#mkdocs_search_modal">
-                                <i class="fa fa-search"></i> Search
-                            </a>
-                        </li>
-                            <li class="nav-item">
-                                <a rel="prev" href="../Steps/" class="nav-link">
-                                    <i class="fa fa-arrow-left"></i> Previous
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a rel="next" class="nav-link disabled">
-                                    Next <i class="fa fa-arrow-right"></i>
-                                </a>
-                            </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-
-        <div class="container">
-            <div class="row">
-                    <div class="col-md-3"><div class="navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
-    <div class="navbar-header">
-        <button type="button" class="navbar-toggler collapsed" data-bs-toggle="collapse" data-bs-target="#toc-collapse" title="Table of Contents">
-            <span class="fa fa-angle-down"></span>
-        </button>
-    </div>
 
     
-    <div id="toc-collapse" class="navbar-collapse collapse card bg-body-tertiary">
-        <ul class="nav flex-column">
-            
-            <li class="nav-item" data-bs-level="1"><a href="#architecture-alignment-assessment" class="nav-link">Architecture Alignment Assessment</a>
-              <ul class="nav flex-column">
-            <li class="nav-item" data-bs-level="2"><a href="#overview" class="nav-link">Overview</a>
-              <ul class="nav flex-column">
-              </ul>
-            </li>
-            <li class="nav-item" data-bs-level="2"><a href="#requirements" class="nav-link">Requirements</a>
-              <ul class="nav flex-column">
-              </ul>
-            </li>
-              </ul>
-            </li>
-        </ul>
-    </div>
-</div></div>
-                    <div class="col-md-9" role="main">
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
 
-<h1 id="architecture-alignment-assessment">Architecture Alignment Assessment</h1>
+    
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#scoring-criteria-for-peer-review" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="Solution Delivery" class="md-header__button md-logo" aria-label="Solution Delivery" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Solution Delivery
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Scoring Criteria for Peer Review
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Solution Delivery" class="md-nav__button md-logo" aria-label="Solution Delivery" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Solution Delivery
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Solution Delivery Documentation
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../adrs/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Architecture Decision Records
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Scoring Criteria for Peer Review
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    Scoring Criteria for Peer Review
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#general-guidelines" class="md-nav__link">
+    <span class="md-ellipsis">
+      General Guidelines
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#what-does-rate-1-5-signify" class="md-nav__link">
+    <span class="md-ellipsis">
+      What Does Rate 1-5 Signify?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#modernization" class="md-nav__link">
+    <span class="md-ellipsis">
+      Modernization
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#reuse-simplify" class="md-nav__link">
+    <span class="md-ellipsis">
+      Reuse &amp; Simplify
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#data-management" class="md-nav__link">
+    <span class="md-ellipsis">
+      Data Management
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#security" class="md-nav__link">
+    <span class="md-ellipsis">
+      Security
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#consumer-experience" class="md-nav__link">
+    <span class="md-ellipsis">
+      Consumer Experience
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../cloudArch/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Cloud Well Architected Frameworks
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../communications/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Communications
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../diagrams/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Diagram Standards
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../duties/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Scope and Responsibilities - General
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../process/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Solution Architecture Process
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../solintent/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Solution Intent Template
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#general-guidelines" class="md-nav__link">
+    <span class="md-ellipsis">
+      General Guidelines
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#what-does-rate-1-5-signify" class="md-nav__link">
+    <span class="md-ellipsis">
+      What Does Rate 1-5 Signify?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#modernization" class="md-nav__link">
+    <span class="md-ellipsis">
+      Modernization
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#reuse-simplify" class="md-nav__link">
+    <span class="md-ellipsis">
+      Reuse &amp; Simplify
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#data-management" class="md-nav__link">
+    <span class="md-ellipsis">
+      Data Management
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#security" class="md-nav__link">
+    <span class="md-ellipsis">
+      Security
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#consumer-experience" class="md-nav__link">
+    <span class="md-ellipsis">
+      Consumer Experience
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="scoring-criteria-for-peer-review">Scoring Criteria for Peer Review</h1>
+<h2 id="general-guidelines">General Guidelines</h2>
 <ul>
-<li>Overview</li>
-<li>Requirements</li>
-<li>Alignment Legend</li>
-<li>Requirements Evaluated</li>
+<li>If a program exhibits criteria from multiple ratings on the scale, review members should use their judgment to determine which criteria are more important for the architecture being reviewed and provide a rating accordingly. Keep it simple and avoid over-engineering the scoring process.</li>
+<li>If any tech strategy is not applicable to the architecture/investment being reviewed, rate it as 3, the same as acceptable strategic alignment.</li>
+<li>Use these criteria as guidelines. Reviewers should use their best judgment to provide an objective rating for the architecture, as not every possible scenario might be covered within the criteria.</li>
 </ul>
-<h2 id="overview">Overview</h2>
-<p>In order to ensure alignment with enterprise and local standards for the products or solutions being developed at a subsidary entity a local auditing process is required. The audit will be conducted by the local architecture team. It is also an opportunity for having local architects review the design and implementation of the solution to provide feedback, identify potential issues, and suggest improvements.</p>
-<h2 id="requirements">Requirements</h2>
-<h3 id="alignment-legend">Alignment Legend</h3>
+<h2 id="what-does-rate-1-5-signify">What Does Rate 1-5 Signify?</h2>
 <table>
 <thead>
 <tr>
-<th>ALIGNMENT</th>
-<th>MEANING</th>
-<th>VALUE</th>
+<th>Rating</th>
+<th>Significance</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>FULL</td>
-<td>The expected architecture outputs exist. Expectation has been met.</td>
-<td>2</td>
-</tr>
-<tr>
-<td>PARTIAL</td>
-<td>Some of the expected architecture outputs exist. Expectation minimally has been met.</td>
 <td>1</td>
+<td>Lacks Strategic Alignment</td>
 </tr>
 <tr>
-<td>NONE</td>
-<td>No evidence of the expected architecture outputs. Expectation have not been met.</td>
-<td>0</td>
+<td>2</td>
+<td>Deviates from Strategy</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Acceptable Strategic Alignment</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Good Strategic Alignment</td>
+</tr>
+<tr>
+<td>5</td>
+<td>Best Strategic Alignment</td>
 </tr>
 </tbody>
 </table>
-<h3 id="requirements-evaluated">Requirements Evaluated</h3>
-<h4 id="architecture-process-cross-referencing">ARCHITECTURE PROCESS (cross referencing)</h4>
-<p><strong>ANALYSIS-01</strong>: Domain Architecture Alignment<br />
-<em>Is this an existing solution, a net new solution, a solution migration, or other? Checking here for the High Level Design being aligned to the business domain.</em><br />
-- Where: High Level Design Diagram<br />
-- Architecture: Solution Architecture<br />
-- Activity: Design Overall Solution<br />
-- Outputs:
-  - Overall Solution Architecture</p>
-<p><strong>ANALYSIS-02</strong>: Gap Analysis<br />
-<em>Is there a definition of the discrepancies between the current and desired state? Is this an innovation and is there intellectual property associated with this solution? Looking for a value statement on a Lean Canvas.</em><br />
-- Where: Lean Canvas Slide<br />
-- Architecture: Solution Architecture<br />
-- Activity: Assess Strategic Architecture Gateway<br />
-- Tasks:
-  - Understand Business Context
-  - Understand Overall Value Streams
-  - Understand Innovation and Intellectual Property for CGSI<br />
-- Outputs:
-  - Strategic Architecture Acceptance (or Lean Canvas)
-  - Innovation and Intellectual Property Proposal (if applicable)</p>
-<p><strong>ANALYSIS-03</strong>: Non-Functional Requirements<br />
-<em>Non-Functional Requirements are documented.</em><br />
-Simple NFR Template from SAFE Arch:<br />
-<a href="https://scaledagileframework.com/nonfunctional-requirements/">https://scaledagileframework.com/nonfunctional-requirements/</a></p>
-<pre><code>Name: &lt;&lt; quality.sub-quality &gt;&gt;
-Scale: &lt;&lt; units &gt;&gt;
-Meter: &lt;&lt; measurement method &gt;&gt;
-Target: &lt;&lt; success level &gt;&gt;
-Constraint: &lt;&lt; failure level &gt;&gt;
-Baseline: &lt;&lt; current level &gt;&gt;
+<h2 id="modernization">Modernization</h2>
+<table>
+<thead>
+<tr>
+<th>Score</th>
+<th>Criteria</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>- New or unmodified monolithic application</td>
+</tr>
+<tr>
+<td></td>
+<td>- Application does not scale</td>
+</tr>
+<tr>
+<td></td>
+<td>- Architecture inhibits ability to make core data accessible through data externalization techniques</td>
+</tr>
+<tr>
+<td></td>
+<td>- Not aligned to the criteria for Modern APIs and API standards with a critical severity rating of &gt;3000ms P95 latency</td>
+</tr>
+<tr>
+<td></td>
+<td>- No AI best practices met</td>
+</tr>
+<tr>
+<td>2</td>
+<td>- New or unmodified monolithic application</td>
+</tr>
+<tr>
+<td></td>
+<td>- Application scales vertically</td>
+</tr>
+<tr>
+<td></td>
+<td>- No plans to make core data accessible through data externalization techniques.</td>
+</tr>
+<tr>
+<td></td>
+<td>- Somewhat aligned to the criteria for Modern, API standards with a high severity rating of &gt;1000ms but &lt;3000ms P95 latency</td>
+</tr>
+<tr>
+<td></td>
+<td>- 1-5 AI best practices met; team has no plan to meet outstanding</td>
+</tr>
+<tr>
+<td>3</td>
+<td>- Minor enhancements to monolithic application, majority microservices cloud architecture.</td>
+</tr>
+<tr>
+<td></td>
+<td>- Majority cloud native architecture, Application scales both vertically and horizontally with manual intervention</td>
+</tr>
+<tr>
+<td></td>
+<td>- Plans in place to make core data accessible through data externalization techniques.</td>
+</tr>
+<tr>
+<td></td>
+<td>- Targeted to align to the criteria for Modern API standards with a medium severity rating of &gt;500ms but &lt;1000ms P95 latency</td>
+</tr>
+<tr>
+<td></td>
+<td>- 1-5 AI best practices met, team has plan to meet outstanding or 6-10 AI best practices met, team has no plan to meet outstanding</td>
+</tr>
+<tr>
+<td>4</td>
+<td>- Transitioning towards a full microservices, cloud-based architecture</td>
+</tr>
+<tr>
+<td></td>
+<td>- Using CI/CD, automation for build/deploy but testing not fully automated</td>
+</tr>
+<tr>
+<td></td>
+<td>- Transitioning towards full cloud native architecture, Application scales both vertically and horizontally with partial automation</td>
+</tr>
+<tr>
+<td></td>
+<td>- Core data accessible through data externalization techniques</td>
+</tr>
+<tr>
+<td></td>
+<td>- Aligned to the criteria for Modern API standards with a low severity rating of &gt;200ms but &lt;500ms P95 latency soon to be reported within Enterprise Advisor</td>
+</tr>
+<tr>
+<td></td>
+<td>- 6-10 AI best practices met, team has plan to meet outstanding</td>
+</tr>
+<tr>
+<td>5</td>
+<td>- Cloud-based architecture (Cloud native and failure mgmt. Containers. Based on Domain Driven Design and Microservice Architecture, Infra as code)</td>
+</tr>
+<tr>
+<td></td>
+<td>- Full cloud native architecture, Application scales both vertically and horizontally with full automation</td>
+</tr>
+<tr>
+<td></td>
+<td>- Recognized as key contributor, maintainer and/or reviewer for 3rd party contributions Core data accessible through data externalization techniques, aligned with and promoting use of Enterprise core architecture</td>
+</tr>
+<tr>
+<td></td>
+<td>- Building technology asset using emerging technologies for enterprise reuse</td>
+</tr>
+<tr>
+<td></td>
+<td>- Aligned to the criteria for Modern API standards with a goal rating of &lt;200ms P95 latency as reported by Enterprise Advisor</td>
+</tr>
+<tr>
+<td></td>
+<td>- All AI best practices met</td>
+</tr>
+</tbody>
+</table>
+<h2 id="reuse-simplify">Reuse &amp; Simplify</h2>
+<table>
+<thead>
+<tr>
+<th>Score</th>
+<th>Criteria</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>- Increase in TCO and addition to technical or architectural debt</td>
+</tr>
+<tr>
+<td></td>
+<td>- Not a core API, internal API solving one business use case</td>
+</tr>
+<tr>
+<td></td>
+<td>- No reuse of core API or core asset</td>
+</tr>
+<tr>
+<td></td>
+<td>- Duplication of function and/or data of an existing Enterprise Capability but for a different data set/domain/sales context</td>
+</tr>
+<tr>
+<td></td>
+<td>- No method of publishing capability backlog (Aha!)</td>
+</tr>
+<tr>
+<td></td>
+<td>- No contribution to inner source</td>
+</tr>
+<tr>
+<td></td>
+<td>- No code/config/lifecycle segregation of Line of Business (LoB) specific functionality from core common capabilities</td>
+</tr>
+<tr>
+<td></td>
+<td>- Uses Discouraged or Unacceptable technologies</td>
+</tr>
+<tr>
+<td></td>
+<td>- Significantly adds to the duplication of data, duplication of code bases, and/or duplication of security-related context/attributes</td>
+</tr>
+<tr>
+<td></td>
+<td>- No metadata or capability publication to enterprise solutions</td>
+</tr>
+<tr>
+<td>2</td>
+<td>- Inherits existing technical or architecture debt with minor incremental additions to debt</td>
+</tr>
+<tr>
+<td></td>
+<td>- Not a core API, internal API solving multiple business use cases</td>
+</tr>
+<tr>
+<td></td>
+<td>- No reuse of core API or core asset</td>
+</tr>
+<tr>
+<td></td>
+<td>- No contribution to inner source</td>
+</tr>
+<tr>
+<td></td>
+<td>- Transitioning to publishing product backlog</td>
+</tr>
+<tr>
+<td></td>
+<td>- Limited duplication of data, no duplication/forking of code, no duplication of security-related context/attributes</td>
+</tr>
+<tr>
+<td></td>
+<td>- No metadata or capability publication to enterprise solutions</td>
+</tr>
+<tr>
+<td>3</td>
+<td>- Inherits existing technical or architecture debt with minor incremental additions to debt</td>
+</tr>
+<tr>
+<td></td>
+<td>- Not a core API, internal API solving multiple business use cases</td>
+</tr>
+<tr>
+<td></td>
+<td>- No reuse of core API or core asset</td>
+</tr>
+<tr>
+<td></td>
+<td>- No contribution to inner source</td>
+</tr>
+<tr>
+<td></td>
+<td>- Transitioning to publishing product backlog</td>
+</tr>
+<tr>
+<td></td>
+<td>- Limited duplication of data, no duplication/forking of code, no duplication of security-related context/attributes</td>
+</tr>
+<tr>
+<td></td>
+<td>- Limited metadata publication to enterprise solutions</td>
+</tr>
+<tr>
+<td>4</td>
+<td>- Significant (or net) reduction to technical or architectural debt, OR significant reductions in duplication of existing function</td>
+</tr>
+<tr>
+<td></td>
+<td>- Not a core API, internal API solving multiple business use cases</td>
+</tr>
+<tr>
+<td></td>
+<td>- Core enterprise asset</td>
+</tr>
+<tr>
+<td></td>
+<td>- Reuse of core API</td>
+</tr>
+<tr>
+<td></td>
+<td>- Contributing to inner source</td>
+</tr>
+<tr>
+<td></td>
+<td>- Transition towards exposing data and functionality as API streams, not all sources streaming</td>
+</tr>
+<tr>
+<td></td>
+<td>- Transition towards exposing/consuming product/application agnostic Business Events to the Enterprise ecosystem</td>
+</tr>
+<tr>
+<td></td>
+<td>- Primarily leveraging Preferred technologies</td>
+</tr>
+<tr>
+<td>5</td>
+<td>- Decommissioning of existing assets directly reducing Total Cost of Ownership and Technical Debt</td>
+</tr>
+<tr>
+<td></td>
+<td>- Is a core API, can be reused by other applications</td>
+</tr>
+<tr>
+<td></td>
+<td>- Core enterprise asset</td>
+</tr>
+<tr>
+<td></td>
+<td>- Producing and contributing to streams</td>
+</tr>
+<tr>
+<td></td>
+<td>- No duplication of data from Enterprise capabilities</td>
+</tr>
+<tr>
+<td></td>
+<td>- Product/Application agnostic Business Events published to Enterprise Consumers</td>
+</tr>
+<tr>
+<td></td>
+<td>- Contribution to inner source</td>
+</tr>
+<tr>
+<td></td>
+<td>- Fully matured federated product and federated software development lifecycle</td>
+</tr>
+<tr>
+<td></td>
+<td>- Fully enterprise viewable federated product capability backlog with regular cadence of product council review, prioritization, and feature governance</td>
+</tr>
+</tbody>
+</table>
+<h2 id="data-management">Data Management</h2>
+<p>(Note: Assumption here of an Enterprise Data Catalog)</p>
+<table>
+<thead>
+<tr>
+<th>Score</th>
+<th>Criteria</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>- <strong>Data Governance</strong>: Data usage and rights have been mainly ignored. What's a data steward? Business owner/stakeholders are not at the table for decisions. Unnecessarily duplicates data (tables) and repositories. Datasets (raw metadata) do not exist in the Enterprise Catalog.</td>
+</tr>
+<tr>
+<td></td>
+<td>- <strong>Metadata Management</strong>: There is no capture of any metadata in the solution.</td>
+</tr>
+<tr>
+<td></td>
+<td>- <strong>Data Quality</strong>: Data quality characteristics are not understood for data repositories present in this solution. No DQ exception processing has been considered. Enterprise capability is ignored, and actions are taken based on inputs from consumer and downstream applications.</td>
+</tr>
+<tr>
+<td></td>
+<td>- <strong>Data Orchestration &amp; Integration</strong>: Job scheduling and pipeline orchestration have not been considered. Existing Data Products have not been considered with no intent to build a new one. The data pipeline uses unacceptable tools. Failure points and impacts on downstream processes undefined. Requirements for data pipeline latency, throughput, and elasticity are not defined. No RPO or RTO defined.</td>
+</tr>
+<tr>
+<td></td>
+<td>- <strong>Information Model</strong>: Missed opportunities to employ canonical data; no roadmap to remediate; accesses source system data directly.</td>
+</tr>
+<tr>
+<td></td>
+<td>- <strong>Data Privacy</strong>: Data at rest or in transit is never encrypted, or sensitive data (PHI/PII) is not masked/de-identified/tokenized. Enterprise capability is ignored.</td>
+</tr>
+<tr>
+<td></td>
+<td>- <strong>Reporting &amp; Analytics</strong>: Solution ignores reporting and analytics considerations.</td>
+</tr>
+<tr>
+<td></td>
+<td>- <strong>Data Repositories</strong>: Scalability, reliability, serviceability, performance, fault-tolerance, availability, and capacity for the solution are ignored. Solution fails when data repositories are unavailable. Site availability less than 80%. No auto scalability, unmet SLAs, no DR or forecast plan.</td>
+</tr>
+<tr>
+<td></td>
+<td>- <strong>Reference Data</strong>: Reference data traditionally ignored, leading to duplicate, outdated, and inaccurate data instances with multiple licenses, incurring cost.</td>
+</tr>
+<tr>
+<td>2</td>
+<td>- <strong>Data Governance</strong>: Datasets with raw metadata are available on the Enterprise Data Catalog with enforced metadata by contract. Some data usage and rights criteria reviewed. Ad-hoc data steward available. Sporadic stakeholder involvement. Some duplicative outcome for the enterprise.</td>
+</tr>
+<tr>
+<td></td>
+<td>- <strong>Metadata Management</strong>: Capture of existing production technical or business metadata exists in a non-preferred data catalog.</td>
+</tr>
+<tr>
+<td></td>
+<td>- <strong>Data Quality</strong>: Data quality characteristics understood for major repositories; minor DQ exception processing considered. Enterprise capabilities acknowledged but not engaged. Focus is on ETL-based DQ check or manual QA team queries.</td>
+</tr>
+<tr>
+<td></td>
+<td>- <strong>Data Orchestration &amp; Integration</strong>: Minimal job scheduling and pipeline orchestration, with discouraged tools. Some failure points addressed. Requirements for latency, throughput, and elasticity partially defined. RPO and RTO defined but viability unclear.</td>
+</tr>
+<tr>
+<td></td>
+<td>- <strong>Information Model</strong>: Missed opportunities to employ canonical data; remediation roadmap in place; accesses source system data directly.</td>
+</tr>
+<tr>
+<td>3</td>
+<td>- <strong>Data Governance</strong>: Datasets with raw metadata and some enrichments available on the Enterprise Catalog. Informally reviewed data usage and rights criteria. Ad-hoc data steward available with some stakeholder processes. Less duplicative outcome for the enterprise.</td>
+</tr>
+<tr>
+<td></td>
+<td>- <strong>Metadata Management</strong>: Existing production technical metadata used to populate a dataset in the Enterprise Data Platform with some business metadata (e.g., data steward, definitions).</td>
+</tr>
+<tr>
+<td></td>
+<td>- <strong>Data Privacy</strong>: Sensitive data at rest or in transit is masked/de-identified/tokenized. Enterprise capabilities assessed.</td>
+</tr>
+<tr>
+<td></td>
+<td>- <strong>Data Orchestration &amp; Integration</strong>: Minor job scheduling and orchestration with minor automation. Some existing Data Products leveraged. Pipeline uses acceptable tools. Most failure points addressed. Defined latency, throughput, and elasticity requirements, albeit viability is unclear.</td>
+</tr>
+<tr>
+<td></td>
+<td>- <strong>Information Model</strong>: Some use of canonical data where appropriate; does not access source system data directly.</td>
+</tr>
+<tr>
+<td></td>
+<td>- <strong>Data Quality</strong>: Some data quality characteristics understood for some repositories. Some DQ processing considered. Enterprise capabilities evaluated.</td>
+</tr>
+<tr>
+<td></td>
+<td>- <strong>Reporting &amp; Analytics</strong>: Solution considers major reporting and analytics elements. Enterprise capabilities assessed.</td>
+</tr>
+<tr>
+<td></td>
+<td>- <strong>Data Repositories</strong>: Some focus on scalability, reliability, and other metrics. Site availability 85-90%. Auto-scaling exists with generally met SLAs. Some performance metrics captured periodically, with DR and forecast planning in place.</td>
+</tr>
+<tr>
+<td></td>
+<td>- <strong>Reference Data</strong>: Datasets available on the Enterprise Data Catalog for public healthcare and endorsed business standards, including technical and business metadata for healthcare reference data licensed by other units.</td>
+</tr>
+<tr>
+<td>4</td>
+<td>- <strong>Data Governance</strong>: Asset available on the Enterprise Data Catalog as Data Product(s) with robust enrichments. Subscription requests reviewed within the Data Platform Catalog. Access manually provisioned. Minimum duplicative outcome for the enterprise.</td>
+</tr>
+<tr>
+<td></td>
+<td>- <strong>Metadata Management</strong>: Production metadata used in a full-function suite in the Data Platform with data lineage and manual enrichment.</td>
+</tr>
+<tr>
+<td></td>
+<td>- <strong>Data Quality</strong>: Well-understood data quality characteristics for key repositories. Happy-path DQ processing evident. Enterprise capabilities included in plan.</td>
+</tr>
+<tr>
+<td></td>
+<td>- <strong>Data Orchestration &amp; Integration</strong>: Good job scheduling and automation support. Existing Data Products leveraged. Some preferred tools used. Most failure points addressed and recovery plans considered. Defined latency, throughput, and elasticity requirements. RPO and RTO plans developed.</td>
+</tr>
+<tr>
+<td></td>
+<td>- <strong>Information Model</strong>: Good use of canonical data; does not access source system data directly.</td>
+</tr>
+<tr>
+<td></td>
+<td>- <strong>Data Privacy</strong>: Sensitive data both at rest and in transit masked/de-identified/tokenized. Enterprise capabilities planned.</td>
+</tr>
+<tr>
+<td></td>
+<td>- <strong>Reporting &amp; Analytics</strong>: Reporting and analytics integral to the solution, with enterprise capabilities planned.</td>
+</tr>
+<tr>
+<td></td>
+<td>- <strong>Data Repositories</strong>: Significant attention to metrics like scalability and availability, surviving short-term outages. Numerous dashboards for metrics. Site availability 90-95%. Auto-scaling solutions mostly meeting SLAs with RCAs on discrepancies.</td>
+</tr>
+<tr>
+<td></td>
+<td>- <strong>Reference Data</strong>: Subscription requests reviewed by Data Product Owners; reference data access managed by the reference management team via the HPC Data Platform.</td>
+</tr>
+<tr>
+<td>5</td>
+<td>- <strong>Data Governance</strong>: Asset available on the Enterprise Data Catalog as Data Product(s) with extensive metadata enrichments.</td>
+</tr>
+<tr>
+<td></td>
+<td>- <strong>Metadata Management</strong>: Metadata populates a full-function suite with comprehensive lineage and automated enrichment using Enterprise classification tools.</td>
+</tr>
+<tr>
+<td></td>
+<td>- <strong>Data Quality</strong>: Comprehensive understanding of data quality characteristics, including profiling and DQ exception processing.</td>
+</tr>
+<tr>
+<td></td>
+<td>- <strong>Data Orchestration &amp; Integration</strong>: Automated job scheduling and orchestration. Existing and new reusable Data Products. Uses all preferred tools. All failure points addressed. Defined latency, throughput, and elasticity requirements with evidence of achievement, including RPO/RTO design.</td>
+</tr>
+<tr>
+<td></td>
+<td>- <strong>Information Model</strong>: Excellent use of canonical data, strengthening existing definitions; avoids direct system data access.</td>
+</tr>
+<tr>
+<td></td>
+<td>- <strong>Data Privacy</strong>: Sensitive data both at rest and in transit masked/de-identified/tokenized. Enterprise capabilities engaged as needed.</td>
+</tr>
+<tr>
+<td></td>
+<td>- <strong>Data Integration, Reporting &amp; Analytics</strong>: Comprehensive account in architecture with engaged enterprise capabilities.</td>
+</tr>
+<tr>
+<td></td>
+<td>- <strong>Data Repositories</strong>: Robust solutions with metrics captured via dashboards, monitoring, and alerts. All SLAs tracked, with comprehensive planning for scalability, fault-tolerance, and capacity.</td>
+</tr>
+<tr>
+<td></td>
+<td>- <strong>Reference Data</strong>: All subscription requests are reviewed within the Enterprise Data Platform Catalog by Data Product Owners.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="security">Security</h2>
+<table>
+<thead>
+<tr>
+<th>Score</th>
+<th>Criteria</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>- Less than 59% of applications use enterprise capability for identity and access management</td>
+</tr>
+<tr>
+<td></td>
+<td>- Less than 59% of applications use enterprise capability for source code management and infrastructure as code</td>
+</tr>
+<tr>
+<td></td>
+<td>- Less than 59% of applications use enterprise-approved encryption methods for data at rest and data in transit</td>
+</tr>
+<tr>
+<td></td>
+<td>- Less than 59% of applications have logging and monitoring in place using enterprise capability</td>
+</tr>
+<tr>
+<td></td>
+<td>- Less than 59% remediation of Severe, Critical, and High violations for all applicable vulnerabilities scans according to application risk category (Static, Dynamic, Pen Test)</td>
+</tr>
+<tr>
+<td></td>
+<td>- Less than 59% of applications have appropriate network controls in place for segmentation, endpoint protection, and defense in depth</td>
+</tr>
+<tr>
+<td>2</td>
+<td>- 60% - 69% of applications use enterprise capability for identity and access management</td>
+</tr>
+<tr>
+<td></td>
+<td>- 60% - 69% of applications use enterprise capability for source code management and infrastructure as code (GitHub)</td>
+</tr>
+<tr>
+<td></td>
+<td>- 60% - 69% of applications use enterprise-approved encryption methods for data at rest and data in transit</td>
+</tr>
+<tr>
+<td></td>
+<td>- 60% - 69% of applications have logging and monitoring in place using enterprise capability</td>
+</tr>
+<tr>
+<td></td>
+<td>- 60% - 69% of remediations for Severe, Critical, and High violations for all applicable vulnerabilities scans according to application risk category (Static, Dynamic, Pen Test)</td>
+</tr>
+<tr>
+<td></td>
+<td>- 60% - 69% of applications have appropriate network controls in place for segmentation, endpoint protection, and defense in depth</td>
+</tr>
+<tr>
+<td>3</td>
+<td>- 70% - 79% of applications use enterprise capability for identity and access management</td>
+</tr>
+<tr>
+<td></td>
+<td>- 70% - 79% of applications use enterprise capability for source code management and infrastructure as code</td>
+</tr>
+<tr>
+<td></td>
+<td>- 70% - 79% of applications use enterprise-approved encryption methods for data at rest and data in transit</td>
+</tr>
+<tr>
+<td></td>
+<td>- 70% - 79% of applications have logging and monitoring in place using enterprise capability</td>
+</tr>
+<tr>
+<td></td>
+<td>- 70% - 79% remediation of Severe, Critical, and High violations of all applicable vulnerabilities according to application risk category (Static, Dynamic, Pen Test)</td>
+</tr>
+<tr>
+<td></td>
+<td>- 70% - 79% of applications have appropriate network controls in place for segmentation, endpoint protection, and defense in depth</td>
+</tr>
+<tr>
+<td>4</td>
+<td>- 80% - 90% of applications use enterprise capability for identity and access management</td>
+</tr>
+<tr>
+<td></td>
+<td>- 80% - 90% of applications use enterprise capability for source code management and infrastructure as code</td>
+</tr>
+<tr>
+<td></td>
+<td>- 80% - 90% of applications use enterprise-approved encryption methods for data at rest and data in transit</td>
+</tr>
+<tr>
+<td></td>
+<td>- 80% - 90% of applications have logging and monitoring in place using enterprise capability</td>
+</tr>
+<tr>
+<td></td>
+<td>- 80% - 90% remediation of Severe, Critical, and High violations of all applicable vulnerabilities according to application risk category (Static, Dynamic, Pen Test)</td>
+</tr>
+<tr>
+<td></td>
+<td>- 80% - 90% of applications have appropriate network controls in place for segmentation, endpoint protection, and defense in depth</td>
+</tr>
+<tr>
+<td>5</td>
+<td>- 100% of applications use enterprise capability for identity and access management</td>
+</tr>
+<tr>
+<td></td>
+<td>- 100% of applications use enterprise capability for source code management and infrastructure as code</td>
+</tr>
+<tr>
+<td></td>
+<td>- 100% of applications use enterprise-approved encryption methods for data at rest and data in transit</td>
+</tr>
+<tr>
+<td></td>
+<td>- 100% of applications have logging and monitoring in place using enterprise capability</td>
+</tr>
+<tr>
+<td></td>
+<td>- 100% remediation of Severe, Critical, and High violations of all applicable vulnerabilities according to application risk category (Static, Dynamic, Pen Test)</td>
+</tr>
+<tr>
+<td></td>
+<td>- 100% of applications have appropriate network controls in place for segmentation, endpoint protection, and defense in depth</td>
+</tr>
+</tbody>
+</table>
+<pre><code>                                                                                                     |
 </code></pre>
-<p><strong>Example NFR</strong></p>
-<pre><code>Name: Performance - Efficiency
-Scale: Number of Claims Per Second (CPS)
-Meter: Average request / response time
-Target: 200 claims per second
-Constraint: &lt;100 claims per second
-Baseline: 100 claims per second
+<h2 id="consumer-experience">Consumer Experience</h2>
+<table>
+<thead>
+<tr>
+<th>Score</th>
+<th>Criteria</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>- Stakeholder experience is not seamless or personalized, leading to a negative NPS for the product or solution</td>
+</tr>
+<tr>
+<td></td>
+<td>- Outreach to end constituents (e.g., via email, SMS) is not aligned to standards, outmoded (e.g., paper, fax), and is not documented or coordinated across business LoBs</td>
+</tr>
+<tr>
+<td></td>
+<td>- Experiences are created in a bespoke fashion based on modality (e.g., web only), not allowing seamless leverage across various devices (mobile, tablet, etc.)</td>
+</tr>
+<tr>
+<td></td>
+<td>- Significant increase to TCO in the short or long term with no new capabilities</td>
+</tr>
+<tr>
+<td></td>
+<td>- Solution architecture and development process does not enable quick delivery of business value (more than 9-12 months)</td>
+</tr>
+<tr>
+<td></td>
+<td>- Solution does not use common components to provide a consistent experience</td>
+</tr>
+<tr>
+<td></td>
+<td>- Solution does not tag and track experience</td>
+</tr>
+<tr>
+<td>2</td>
+<td>- Stakeholder experience is less than seamless or personalized, potentially leading to a negative NPS for the product or solution</td>
+</tr>
+<tr>
+<td></td>
+<td>- Outreach to end constituents (e.g., via email, SMS) is not aligned to standards and is not documented or coordinated across business LoBs</td>
+</tr>
+<tr>
+<td></td>
+<td>- Experiences are not fully multimodal in nature</td>
+</tr>
+<tr>
+<td></td>
+<td>- No impact to TCO</td>
+</tr>
+<tr>
+<td></td>
+<td>- Solution architecture and development process enables delivery of business value (less than 9 months), but iteration speed to assess, measure, and adjust experience is slow (&gt;4 weeks)</td>
+</tr>
+<tr>
+<td></td>
+<td>- Solution uses one or two common components to provide a consistent experience but could use more and has apparent experience deficiencies</td>
+</tr>
+<tr>
+<td></td>
+<td>- Solution tags and tracks experience without using standard RUM and consumer journey tracking solutions</td>
+</tr>
+<tr>
+<td>3</td>
+<td>- Incremental experience design leading to a more personalized or seamless experience in the long-term, improving NPS in the long run</td>
+</tr>
+<tr>
+<td></td>
+<td>- Outreach to end constituents (e.g., via email, SMS) is aligned to standards but may not be fully documented or coordinated across all business LoBs</td>
+</tr>
+<tr>
+<td></td>
+<td>- Experiences are designed to be multimodal but may not be optimized for all modalities (e.g., sub-par mobile experience)</td>
+</tr>
+<tr>
+<td></td>
+<td>- Reduces TCO in less than 18 months</td>
+</tr>
+<tr>
+<td></td>
+<td>- Solution architecture and development process enables quick delivery of business value (less than 4 months), with moderate iteration speed (2-4 weeks)</td>
+</tr>
+<tr>
+<td></td>
+<td>- Solution uses common components to provide a consistent experience but could use more, with minor experience deficiencies</td>
+</tr>
+<tr>
+<td></td>
+<td>- Solution tags and tracks most of the experience using enterprise standard RUM and consumer journey tracking solutions</td>
+</tr>
+<tr>
+<td>4</td>
+<td>- Experience design leading to a more personalized or seamless experience in the short-term, improving NPS in the long run</td>
+</tr>
+<tr>
+<td></td>
+<td>- Outreach to end constituents (e.g., via email, SMS) is aligned to standards, fully documented, and coordinated for a given business</td>
+</tr>
+<tr>
+<td></td>
+<td>- Experiences are designed to be multimodal and optimized across modalities</td>
+</tr>
+<tr>
+<td></td>
+<td>- Reduces TCO in the near future</td>
+</tr>
+<tr>
+<td></td>
+<td>- Solution architecture and development process enables quick delivery of business value (less than 2 months), with quick iteration speed (&lt;2 weeks)</td>
+</tr>
+<tr>
+<td></td>
+<td>- Solution uses common components to provide a consistent experience at every opportunity</td>
+</tr>
+<tr>
+<td></td>
+<td>- Solution tags and tracks experience using enterprise standard RUM and consumer journey tracking solutions</td>
+</tr>
+<tr>
+<td>5</td>
+<td>- Experience design leading to a highly personalized or seamless experience in the immediate term, significantly improving NPS in the short run</td>
+</tr>
+<tr>
+<td></td>
+<td>- Outreach to end constituents (e.g., via email, SMS) is aligned to standards, fully documented, and coordinated across the enterprise</td>
+</tr>
+<tr>
+<td></td>
+<td>- Experiences are designed to be multimodal and optimized across modalities</td>
+</tr>
+<tr>
+<td></td>
+<td>- Significantly reduces TCO in the near future</td>
+</tr>
+<tr>
+<td></td>
+<td>- Solution architecture and development process enables quick turnaround (less than 1 month), with fast iteration speed (&lt;3 days)</td>
+</tr>
+<tr>
+<td></td>
+<td>- Solution uses common components to provide a consistent experience at every opportunity</td>
+</tr>
+<tr>
+<td></td>
+<td>- Solution tags and tracks experience using enterprise standard RUM and consumer journey tracking solutions</td>
+</tr>
+</tbody>
+</table>
+<pre><code>   ## Engineering Excellence
 </code></pre>
-<ul>
-<li>Where: Confluence or Jira  </li>
-<li>Architecture: Application Architecture  </li>
-<li>Activity: Manage Risks and NFR's  </li>
-<li>Outputs:</li>
-<li>NFR's Management Plan</li>
-<li>Risk Mitigation Plan</li>
-</ul>
-<hr />
-<p><strong>VISION-01</strong>: Architectural Principles<br />
-Architectural Guiding Principles (Enterprise) being followed:<br />
-1. Reuse<br />
-2. Microservices<br />
-3. Event based Architectures<br />
-4. Loose coupling/Tightly Cohesive<br />
-- Evidence: Adhoc<br />
-- Activity: Design Overall Solution<br />
-- Tasks:
-  - Decompose Solution in Modules<br />
-- Outputs:
-  - Overall Solution Architecture
-  - Application Architecture
-  - Data Architecture</p>
-<p><strong>VISION-02</strong>: Stakeholder Map<br />
-- What to Check: Identify stakeholders, their influence, and key questions or concerns<br />
-- Where: Confluence<br />
-- Activity: Manage Stakeholders<br />
-- Outputs:
-  - Stakeholder Communication Plan</p>
-<p><strong>VISION-03</strong>: Value Chain<br />
-- What to Check: High-level organisational and functional context<br />
-- Where: Value Chain Diagram<br />
-- Activity: Design Overall Solution<br />
-- Tasks:
-  - Fulfil Overall Value Streams</p>
-<p><strong>VISION-04</strong>: Solution Concept<br />
-- What to Check: Future state High Level Design<br />
-- Where: High Level Design Diagram<br />
-- Activity: Assess Strategic Architecture Gateway<br />
-- Tasks:
-  - Understand Business Context<br />
-- Outputs:
-  - Strategic Architecture Acceptance</p>
-<hr />
-<p><strong>BUSINESS-01</strong>: Business Controls<br />
-Business policy areas as applicable:</p>
-<pre><code>- Security
-- Data protection
-- Availability
-- Change management
-- Incident management
-- Accessibility
-- Compliance
-- Business Continuity/DR
-- Vendor management
-- Knowledge management
-- Quality assurance
-- Service level agreements
-- Budget and cost management
-- Intellectual property
-</code></pre>
-<ul>
-<li>Where:  ITSM, CHG Tickets, DR Plan  </li>
-<li>Architecture: Application Architecture  </li>
-<li>Activity: Design Overall Solution  </li>
-<li>Tasks:</li>
-<li>Review Adherence to Enterprise Standards</li>
-</ul>
-<hr />
-<p><strong>DATA-01</strong>: Data Security<br />
-- What to Check: PHI/PII/PFI/GDPR, regulatory requirements, protection<br />
-- Where: Cloud Infra reviews, Enterprise Policicies 
-- Activity: Submit for Security Review<br />
-- Tasks:
-  - Submit Data Governance Report<br />
-- Outputs:
-  - Security Architecture Report</p>
-<p><strong>DATA-02</strong>: Enterprise Data Firewall<br />
-- What to Check: Documented approach<br />
-- Activity: Submit for Security Review<br />
-- Outputs:
-  - Data Governance Report</p>
-<p><strong>DATA-03</strong>: Data Flow<br />
-- What to Check: Data flow diagram, schema, versioning/change management<br />
-- Where: Data Flow Diagram<br />
-- Activity: Design Overall Solution<br />
-- Outputs:
-  - Data Architecture</p>
-<hr />
-<p><strong>SEC-01</strong>: Access Control<br />
-- What to Check: CISO - RBAC/PBAC/ABAC concerns<br />
-- Where: Security Matrix<br />
-- Activity: Submit for Security Review<br />
-- Outputs:
-  - Security Architecture Report</p>
-<hr />
-<p><strong>APPLICATION-01</strong>: Application Registration<br />
-- What to Check: Enterprise Application Management
-- Where: Application Identifiers<br />
-- Activity: Manage Product Platform<br />
-- Tasks:
-  - Tag and Register Application<br />
-- Outputs:
-  - Application ID(s)</p>
-<p><strong>APPLICATION-02</strong>: API Specifications<br />
-- What to Check: Swagger/OpenAPI, Interface Catalog<br />
-- Where: API Specs<br />
-- Architecture: Application Architecture<br />
-- Activity: Design Features Solution Intent<br />
-- Outputs:
-  - Feature Solution Design Document</p>
-<p><strong>APPLICATION-03</strong>: CI/CD<br />
-- What to Check: CI/CD setup, automation, testing<br />
-- Where: Bamboo, EHDS, SonarCube, CheckMarx<br />
-- Architecture: Application Architecture<br />
-- Activity: Manage Product Platform<br />
-- Outputs:
-  - CICD Pipeline
-  - DevOps Playbook
-  - Test Automation Scripts
-  - DevOps Infrastructure as Code</p>
-<p><strong>APPLICATION-04</strong>: Technology Matrix<br />
-- What to Check: Tech stack documentation<br />
-- Where: Confluence<br />
-- Architecture: Technical Architecture<br />
-- Activity: Design Overall Solution<br />
-- Outputs:
-  - Overall/Application Architecture</p>
-<p><strong>APPLICATION-05</strong>: Performance<br />
-- What to Check: Performance test reports<br />
-- Where: Test Reports<br />
-- Architecture: Application Architecture<br />
-- Activity: Manage Product Platform<br />
-- Tasks:
-  - Support Performance Engineering</p>
-<p><strong>APPLICATION-06</strong>: Architectural Artifacts<br />
-- What to Check: Maintained architecture documents<br />
-- Where: Confluence<br />
-- Activity: Design Overall Solution<br />
-- Outputs:
-  - Overall Solution Architecture</p>
-<p><strong>APPLICATION-07</strong>: Reference Architecture Patterns</p>
-<ul>
-<li>What to Check: Reference Patterns</li>
-<li>Where: Eneterprise Reference Pattern Library</li>
-<li>Activity: Design Overall Solution  </li>
-<li>Outputs: Overall Solution Architecture</li>
-</ul>
-<p><strong>APPLICATION-08</strong>: Application Security<br />
-- What to Check: Vulnerability scan results<br />
-- Where: Prisma<br />
-- Activity: Manage Product Platform<br />
-- Tasks:
-  - Monitor and Manage Violations<br />
-- Outputs:
-  - Security Scan Reports</p>
-<p><strong>APPLICATION-09</strong>: Observability and Monitoring<br />
-- What to Check: Logs, dashboards, tracing<br />
-- Where: Splunk, Datadog<br />
-- Activity: Manage Product Platform<br />
-- Outputs:
-  - Dashboards / Logs / Traces</p>
-<p><strong>APPLICATION-10</strong>: Architecture Decision Records<br />
-- Where: Application Documentation 
-- Activity: Manage Architecture Decisions<br />
-- Outputs:
-  - ADRs</p>
-<p><strong>APPLICATION-11</strong>: BCM Mapping (Level 1)<br />
-- Where:  Application Documentation 
-- Activity: Assess Strategic Architecture Gateway<br />
-- Tasks:
-  - Understand Business Context<br />
-- Outputs:
-  - Strategic Architecture Acceptance</p>
-<p><strong>APPLICATION-12</strong>: Value Stream Mapping (Level 1)<br />
-- Where: Application Documentation<br />
-- Activity: Design Overall Solution<br />
-- Tasks:
-  - Fulfil Value Streams</p>
-<hr />
-<p><strong>TECHNOLOGY-01</strong>: <br />
-- What to Check: Tech stack compliance<br />
-- Where: Enterprise Technology Repository (If Exists)
-- Activity: Manage Architecture Decisions<br />
-- Outputs:
-  - ADRs<br />
-- Additional Activity: Design Overall Solution<br />
-- Tasks:
-  - Review Adherence to Standards</p>
-<p><strong>TECHNOLOGY-02</strong>: Environment Management<br />
-- What to Check: Environment setups (DEV/SIT/UAT/PERF/PROD)<br />
-- Where: Environment RACI <br />
-- Activity: Manage Product Platform<br />
-- Tasks:
-  - Optimise Product Resources</p></div>
-            </div>
-        </div>
+<table>
+<thead>
+<tr>
+<th>Score</th>
+<th>Criteria</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>- <strong>Engineering Culture</strong>: Less than 40% of program engineers contribute meaningful code in GitHub over a 30-day period</td>
+</tr>
+<tr>
+<td></td>
+<td>- <strong>Engineering Culture</strong>: Less than 60% of eligible program source code repositories are in GitHub Enterprise Cloud</td>
+</tr>
+<tr>
+<td></td>
+<td>- <strong>Performance &amp; Accountability</strong>: Less than 30% of applications have respective Vital Business Functions (VBF) identified, mapped, monitored with availability probes, and integrated into Enterprise Advisor for reporting</td>
+</tr>
+<tr>
+<td></td>
+<td>- <strong>Open Source Software and Technology</strong>: &lt;30% of technologies implemented are Preferred open source solutions</td>
+</tr>
+<tr>
+<td></td>
+<td>- Open Source technologies are not registered to the applications or compliant with licensing</td>
+</tr>
+<tr>
+<td></td>
+<td>- Program team has not contributed to any open source projects leveraged in the solutions</td>
+</tr>
+<tr>
+<td>2</td>
+<td>- <strong>Engineering Culture</strong>: 40-49% of program engineers contribute meaningful code in GitHub over a 30-day period</td>
+</tr>
+<tr>
+<td></td>
+<td>- <strong>Engineering Culture</strong>: 60% of eligible program source code repositories are in GitHub Enterprise Cloud</td>
+</tr>
+<tr>
+<td></td>
+<td>- <strong>Performance &amp; Accountability</strong>: 30% or more applications have respective VBF identified, mapped, monitored with availability probes</td>
+</tr>
+<tr>
+<td></td>
+<td>- <strong>Open Source Software and Technology</strong>: 30% of technologies implemented are Preferred open source solutions</td>
+</tr>
+<tr>
+<td></td>
+<td>- Open Source technologies are not registered to the applications or compliant with licensing</td>
+</tr>
+<tr>
+<td></td>
+<td>- Program team has not contributed code, docs, or feedback to the open source projects leveraged in the solutions</td>
+</tr>
+<tr>
+<td>3</td>
+<td>- <strong>Engineering Culture</strong>: 50-54% of program engineers contribute meaningful code in GitHub over a 30-day period</td>
+</tr>
+<tr>
+<td></td>
+<td>- <strong>Engineering Culture</strong>: 70% of eligible program source code repositories are in GitHub Enterprise Cloud</td>
+</tr>
+<tr>
+<td></td>
+<td>- <strong>Performance &amp; Accountability</strong>: 40% or more applications have respective VBF identified, mapped, monitored with availability probes, and integrated into Enterprise Advisor for reporting</td>
+</tr>
+<tr>
+<td></td>
+<td>- <strong>Open Source Software and Technology</strong>: 50% of technologies implemented are Preferred open source solutions</td>
+</tr>
+<tr>
+<td></td>
+<td>- Open Source technologies are registered to the applications or program in Barista and compliant with licensing</td>
+</tr>
+<tr>
+<td></td>
+<td>- Program team has contributed code, docs, or feedback to one or more open source projects leveraged in the solutions</td>
+</tr>
+<tr>
+<td>4</td>
+<td>- <strong>Engineering Culture</strong>: 55-59% of program engineers contribute meaningful code in GitHub over a 30-day period</td>
+</tr>
+<tr>
+<td></td>
+<td>- <strong>Engineering Culture</strong>: 80% of eligible program source code repositories are in GitHub Enterprise Cloud</td>
+</tr>
+<tr>
+<td></td>
+<td>- <strong>Performance &amp; Accountability</strong>: 50% or more applications have respective VBF identified, mapped, monitored with availability probes, and integrated into Enterprise Advisor for reporting</td>
+</tr>
+<tr>
+<td></td>
+<td>- <strong>Open Source Software and Technology</strong>: 65% of technologies implemented are Preferred open source solutions</td>
+</tr>
+<tr>
+<td></td>
+<td>- Open Source technologies are registered to the applications and compliant with licensing</td>
+</tr>
+<tr>
+<td></td>
+<td>- Aspects of the program are released as open source</td>
+</tr>
+<tr>
+<td></td>
+<td>- Program team has contributed code or docs to one or more open source projects leveraged in the solution(s)</td>
+</tr>
+<tr>
+<td>5</td>
+<td>- <strong>Engineering Culture</strong>: 60% of program engineers contribute meaningful code in GitHub over a 30-day period</td>
+</tr>
+<tr>
+<td></td>
+<td>- <strong>Engineering Culture</strong>: 90% of eligible program source code repositories are in GitHub Enterprise Cloud</td>
+</tr>
+<tr>
+<td></td>
+<td>- <strong>Performance &amp; Accountability</strong>: 60% or more applications have respective VBF identified, mapped, monitored with availability probes</td>
+</tr>
+<tr>
+<td></td>
+<td>- <strong>Open Source Software and Technology</strong>: 80% of technologies implemented are Preferred open source solutions</td>
+</tr>
+<tr>
+<td></td>
+<td>- Open Source technologies are registered to the applications and compliant with licensing</td>
+</tr>
+<tr>
+<td></td>
+<td>- Aspects of the program are released as open source</td>
+</tr>
+<tr>
+<td></td>
+<td>- Program team has contributed code, docs, and feedback to one or more open source projects leveraged in the solution(s)</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
 
-        <footer class="col-md-12">
-            <hr>
-            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
-        </footer>
-        <script src="../js/bootstrap.bundle.min.js"></script>
-        <script>
-            var base_url = "..",
-                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
-        </script>
-        <script src="../js/base.js"></script>
-        <script src="../search/main.js"></script>
 
-        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-lg">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h4 class="modal-title" id="searchModalLabel">Search</h4>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
             </div>
-            <div class="modal-body">
-                <p>From here you can search these documents. Enter your search terms below.</p>
-                <form>
-                    <div class="form-group">
-                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
-                    </div>
-                </form>
-                <div id="mkdocs-search-results" data-no-results-text="No results found"></div>
-            </div>
-            <div class="modal-footer">
-            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
         </div>
-    </div>
-</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body">
-              <table class="table">
-                <thead>
-                  <tr>
-                    <th style="width: 20%;">Keys</th>
-                    <th>Action</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td class="help shortcut"><kbd>?</kbd></td>
-                    <td>Open this help</td>
-                  </tr>
-                  <tr>
-                    <td class="next shortcut"><kbd>n</kbd></td>
-                    <td>Next page</td>
-                  </tr>
-                  <tr>
-                    <td class="prev shortcut"><kbd>p</kbd></td>
-                    <td>Previous page</td>
-                  </tr>
-                  <tr>
-                    <td class="search shortcut"><kbd>s</kbd></td>
-                    <td>Search</td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-            <div class="modal-footer">
-            </div>
-        </div>
-    </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
 </div>
-
-    </body>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "..", "features": [], "search": "../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.13a4f30d.min.js"></script>
+      
+    
+  </body>
 </html>

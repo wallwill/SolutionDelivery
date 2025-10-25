@@ -1,4 +1,4 @@
-site_name: Solution Delivery
+site_name: Practical Solution Delivery
 theme:
   name: material
 Nav:
@@ -10,3 +10,4 @@ Nav:
 -Duties: duties.md
 -Adrs: adrs.md
 -Cloud: cloudArch.md
+-Influence: influence.md

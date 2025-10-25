@@ -1,8 +1,11 @@
 # Solution Architecture Process
 
-- Overview
+A generic listing of phases and activities that can be followed
+
+Acknowledgements: [Nilseu Padilha](https://www.linkedin.com/in/nilseupadilha/)
+
+
 - Solution Architecture Delivery Process
-  - Overview: Solution Delivery Macro Process
   - Phase: Solution Intake Process
   - Phase: Solution Architecture Elaboration
     - Activity: E1 - Assess Strategic Architecture Gateway

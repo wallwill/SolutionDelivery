@@ -1,4 +1,6 @@
+
 # Scope and Responsibilities - General
+Acknowledgements: [Alan Mullane](https://www.linkedin.com/in/alan-mullane-b04a1387/')
 
 - **Collaborate with Product Owners/PMs**: Define functional and non-functional requirements and prioritize backlog.
 - **Collaborate with Business and Architects**: Work with solution/enterprise architects to translate business requirements into scalable solution options.
