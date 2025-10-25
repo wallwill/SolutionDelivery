@@ -6,4 +6,4 @@ For the Enterprise , ADRs will give visibility to decisions that are typically m
 
 For the Architects and Application Teams, it expedites decision making through federated accountability while keeping technical decisions of significance closer to the project and execution teams. 
 
-Github.com Examples
+Learn more:[https://adr.github.io/]('https://adr.github.io')

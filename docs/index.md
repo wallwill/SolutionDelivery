@@ -1,4 +1,3 @@
 # Solution Delivery Documentation
 
-The following documentation covers, foundational guidelines for setting up a solution architecture practice in an line of business or a global site.
-
+If your starting a solution architecture practice or looking to put some structure to a federated architecture community this might be the site to help get started.
