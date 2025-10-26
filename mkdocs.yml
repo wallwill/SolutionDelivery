@@ -1,4 +1,4 @@
-site_name: Practical Solution Delivery
+site_name: Modern Solution Delivery for Products and Services
 theme:
   name: material
   features:
@@ -25,6 +25,7 @@ markdown_extensions:
   - pymdownx.details
 Nav:
 -Home: index.md
+-Intake: intake.md
 -Design: design.md
 -Process : process.md 
 -Assessment : assessment.md

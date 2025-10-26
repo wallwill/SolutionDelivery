@@ -141,12 +141,6 @@ Unchecked technical debt leads to:
 
 ## Recommended Resources
 
-- **Microsoft Cloud Adoption Framework – Technology Management**  
-  [learn.microsoft.com/azure/cloud-adoption-framework/](https://learn.microsoft.com/azure/cloud-adoption-framework/)
-- **AWS Well-Architected Framework – Sustainability & Operations Pillars**  
-  [aws.amazon.com/architecture/well-architected/](https://aws.amazon.com/architecture/well-architected/)
-- **Google Cloud Architecture Framework – Manage Technology Risk**  
-  [cloud.google.com/architecture/framework](https://cloud.google.com/architecture/framework)
 - **Gartner TIME Model Overview** – Tolerate, Invest, Migrate, Eliminate lifecycle strategy.
 - **ThoughtWorks Technology Radar** – Inspiration for visualizing technology lifecycles.  
   [thoughtworks.com/radar](https://www.thoughtworks.com/radar)
