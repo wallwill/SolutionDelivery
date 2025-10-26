@@ -12,7 +12,7 @@
         <link rel="prev" href="../diagrams/">
       
       
-        <link rel="next" href="../influence/">
+        <link rel="next" href="../eta/">
       
       
       <link rel="icon" href="../assets/images/favicon.png">
@@ -25,6 +25,9 @@
     
     
       <link rel="stylesheet" href="../assets/stylesheets/main.342714a4.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
       
       
 
@@ -53,7 +56,14 @@
   </head>
   
   
-    <body dir="ltr">
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="teal">
   
     
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
@@ -105,6 +115,24 @@
       </div>
     </div>
     
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="teal"  aria-hidden="true"  type="radio" name="__palette" id="__palette_0">
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="blue" data-md-color-accent="cyan"  aria-hidden="true"  type="radio" name="__palette" id="__palette_1">
+    
+  
+</form>
+      
+    
     
       <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
     
@@ -134,6 +162,8 @@
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
         </button>
       </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
       
     </form>
     <div class="md-search__output">
@@ -174,7 +204,9 @@
 
 
 
-<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  
+
+<nav class="md-nav md-nav--primary md-nav--integrated" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
     <a href=".." title="Practical Solution Delivery" class="md-nav__button md-logo" aria-label="Practical Solution Delivery" data-md-component="logo">
       
@@ -304,6 +336,28 @@
   
   
     <li class="md-nav__item">
+      <a href="../design/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Reference Architectures and Design Patterns
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../diagrams/" class="md-nav__link">
         
   
@@ -347,6 +401,28 @@
 
       </a>
       
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../eta/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Enterprise Technical Architecture, Technology Inventories, and Technical Debt Management
+    
+  </span>
+  
+
+      </a>
     </li>
   
 
@@ -407,7 +483,29 @@
   
   
   <span class="md-ellipsis">
-    Solution Intent Template
+    The Solution Intent Document (SID)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../stakeholders/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Stakeholder Management for Solution Architects
     
   </span>
   
@@ -424,24 +522,6 @@
               </div>
             
             
-              
-              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
-                <div class="md-sidebar__scrollwrap">
-                  <div class="md-sidebar__inner">
-                    
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-</nav>
-                  </div>
-                </div>
-              </div>
-            
           
           
             <div class="md-content" data-md-component="content">
@@ -451,7 +531,7 @@
 
 
 
-<h1 id="scope-and-responsibilities-general">Scope and Responsibilities - General</h1>
+<h1 id="scope-and-responsibilities-general">Scope and Responsibilities - General<a class="headerlink" href="#scope-and-responsibilities-general" title="Permanent link">&para;</a></h1>
 <p>Acknowledgements: <a href="https://www.linkedin.com/in/alan-mullane-b04a1387/'">Alan Mullane</a></p>
 <ul>
 <li><strong>Collaborate with Product Owners/PMs</strong>: Define functional and non-functional requirements and prioritize backlog.</li>
@@ -468,79 +548,79 @@
 <li>Architectural Artifacts</li>
 <li>Architectural Decision Records</li>
 </ul>
-<h1 id="scope-and-responsibilities-detailed">Scope and Responsibilities – Detailed</h1>
-<h2 id="enterprise-architecture-awareness-and-engagement">Enterprise Architecture (Awareness and Engagement)</h2>
+<h1 id="scope-and-responsibilities-detailed">Scope and Responsibilities – Detailed<a class="headerlink" href="#scope-and-responsibilities-detailed" title="Permanent link">&para;</a></h1>
+<h2 id="enterprise-architecture-awareness-and-engagement">Enterprise Architecture (Awareness and Engagement)<a class="headerlink" href="#enterprise-architecture-awareness-and-engagement" title="Permanent link">&para;</a></h2>
 <ul>
 <li>Domain and Data Model Governance</li>
 <li>Technology and Tools Governance</li>
 <li>Program Roadmap Alignment</li>
 </ul>
-<h2 id="cloud-architecture-awareness-and-engagement">Cloud Architecture (Awareness and Engagement)</h2>
+<h2 id="cloud-architecture-awareness-and-engagement">Cloud Architecture (Awareness and Engagement)<a class="headerlink" href="#cloud-architecture-awareness-and-engagement" title="Permanent link">&para;</a></h2>
 <ul>
 <li>Cloud platform setup and governance</li>
 <li>Cloud Tenant/account/technology/cost governance</li>
 <li>Multi-Team Cloud Support</li>
 </ul>
-<h2 id="solution-architecture-actively-involved">Solution Architecture (Actively Involved)</h2>
+<h2 id="solution-architecture-actively-involved">Solution Architecture (Actively Involved)<a class="headerlink" href="#solution-architecture-actively-involved" title="Permanent link">&para;</a></h2>
 <ul>
 <li>Review of application domain models, data management, non-functional requirements, security, metrics, monitoring, operational support, and logging</li>
 <li>System component design and integration, technology and tools identification</li>
 <li>Architecture blueprints, technical reviews, Proofs of Concept (PoCs), product roadmap alignment</li>
 </ul>
-<h2 id="product-management-passive-reviewer">Product Management (Passive Reviewer)</h2>
+<h2 id="product-management-passive-reviewer">Product Management (Passive Reviewer)<a class="headerlink" href="#product-management-passive-reviewer" title="Permanent link">&para;</a></h2>
 <ul>
 <li>Product Roadmap Definition</li>
 <li>Use Case Definition</li>
 <li>Product Solutioning, UI/UX</li>
 </ul>
-<h2 id="testing-passive-reviewer">Testing (Passive Reviewer)</h2>
+<h2 id="testing-passive-reviewer">Testing (Passive Reviewer)<a class="headerlink" href="#testing-passive-reviewer" title="Permanent link">&para;</a></h2>
 <ul>
 <li>Test Plan and Acceptance Criteria</li>
 <li>Regression and Performance Test Report</li>
 <li>Quality Assurance</li>
 </ul>
-<h2 id="development-guiding-role">Development (Guiding Role)</h2>
+<h2 id="development-guiding-role">Development (Guiding Role)<a class="headerlink" href="#development-guiding-role" title="Permanent link">&para;</a></h2>
 <ul>
 <li>Data and application/API component design and review</li>
 <li>Continuous integration, test, and delivery with automated pipelines</li>
 <li>Code quality and best practices</li>
 </ul>
-<h2 id="devsecops-passive">DevSecOps (Passive)</h2>
+<h2 id="devsecops-passive">DevSecOps (Passive)<a class="headerlink" href="#devsecops-passive" title="Permanent link">&para;</a></h2>
 <ul>
 <li>Packaging and release of software</li>
 <li>Security Governance</li>
 </ul>
-<h1 id="appendix">Appendix</h1>
-<h2 id="levels-of-granularity">Levels of Granularity</h2>
-<h3 id="architecture">Architecture</h3>
+<h1 id="appendix">Appendix<a class="headerlink" href="#appendix" title="Permanent link">&para;</a></h1>
+<h2 id="levels-of-granularity">Levels of Granularity<a class="headerlink" href="#levels-of-granularity" title="Permanent link">&para;</a></h2>
+<h3 id="architecture">Architecture<a class="headerlink" href="#architecture" title="Permanent link">&para;</a></h3>
 <ul>
 <li>Enterprise Architecture, Program Roadmap</li>
 <li>Cloud Architecture</li>
 <li>Solution Architecture, Product Roadmap</li>
 <li>Scrum of Scrums, ART</li>
 </ul>
-<h3 id="product">Product</h3>
+<h3 id="product">Product<a class="headerlink" href="#product" title="Permanent link">&para;</a></h3>
 <ul>
 <li>Program and Product Planning</li>
 <li>Requirements gathering and definition</li>
 <li>Sprint Planning and Sprint Demo review</li>
 <li>Product sign-off</li>
 </ul>
-<h3 id="test">Test</h3>
+<h3 id="test">Test<a class="headerlink" href="#test" title="Permanent link">&para;</a></h3>
 <ul>
 <li>Test Planning</li>
 <li>Documentation and guides for test tools and testing best practices</li>
 <li>Integration and regression test execution</li>
 <li>Regression test sign-off</li>
 </ul>
-<h3 id="development">Development</h3>
+<h3 id="development">Development<a class="headerlink" href="#development" title="Permanent link">&para;</a></h3>
 <ul>
 <li>Application and DevOps architecture, component, product and test design, release planning</li>
 <li>DevOps environment setup, provisioning, and monitoring</li>
 <li>Component build, deployment, unit and integration tests</li>
 <li>Daily Scrums, Sprint Planning and Refinement, Technical Reviews, Demos</li>
 </ul>
-<h3 id="release">Release</h3>
+<h3 id="release">Release<a class="headerlink" href="#release" title="Permanent link">&para;</a></h3>
 <ul>
 <li>Release and Verification, Deployment Guide, Regression Tests</li>
 <li>Merge to Master and component versioning</li>
@@ -595,7 +675,7 @@
     
     
       
-      <script id="__config" type="application/json">{"base": "..", "features": [], "search": "../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"base": "..", "features": ["navigation.instant", "content.code.copy", "search.suggest", "toc.integrate"], "search": "../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
       <script src="../assets/javascripts/bundle.13a4f30d.min.js"></script>

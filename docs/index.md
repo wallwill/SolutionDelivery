@@ -11,4 +11,22 @@ A collection of solution delivery material from experience of global delivery en
 - Influence without Authority. 
 - Build 'Fit for purpose'.
 - Always lookup first and maximize **Reuse**.
+- Think **Big**, Act **Small**, Move **Fast** 
 
+## Evolving the Practice Around “Just Enough Architecture” ##
+
+A few key principles for a nimble, **product-centric** architecture practice, especially in an emerging GenAI enabled Software Engineering world.
+
+- Spec driven everything-as-code.
+- Focus on outcomes, not artefacts.
+- Ask: “What decision are we enabling?”, "What is the value or cost savings ?" instead of “What template are we filling?”
+- Promote shared ownership.
+- Product Owners, engineers and architects co-own architecture decisions.
+- Build alignment and avoid “throwing diagrams over the wall.”
+- Architect through iteration.
+- Draft early, get a conceptual diagram out there and refine with feedback.
+- Avoid premature precision — evolve designs as product understanding grows.
+- Automate compliance.
+- Embed architectural and security rules into CI/CD pipelines rather than review checklists.
+- Communicate through conversations and visuals.
+- Prefer collaboration whiteboards, diagrams, and storytelling to text-heavy documents

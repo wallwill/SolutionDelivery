@@ -1,6 +1,28 @@
 site_name: Practical Solution Delivery
 theme:
   name: material
+  features:
+    - navigation.instant
+    - content.code.copy
+    - search.suggest
+    - toc.integrate
+  palette:
+    - scheme: default
+      primary: indigo
+      accent: teal
+    - scheme: slate
+      primary: blue
+      accent: cyan
+markdown_extensions:
+  - admonition
+  - footnotes
+  - tables
+  - toc:
+      permalink: true
+  - def_list
+  - pymdownx.superfences
+  - pymdownx.tabbed
+  - pymdownx.details
 Nav:
 -Home: index.md
 -Design: design.md
