@@ -24,8 +24,6 @@ A few key principles for a nimble, **product-centric** architecture practice, es
 - Build alignment and avoid “throwing diagrams over the wall.”
 - Architect through iteration.Draft early, get a conceptual diagram out there and refine with feedback.
 - Avoid premature precision — evolve designs as product understanding grows.
-- Automate compliance.
-- Embed architectural and security rules into CI/CD pipelines rather than review checklists.
-- Communicate through conversations and visuals.
-- Prefer collaboration whiteboards, diagrams, and storytelling to text-heavy documents
+- Automate compliance. Embed architectural and security rules into CI/CD pipelines rather than review checklists.
+- Communicate through conversations and visuals.Prefer collaboration whiteboards, diagrams, and storytelling to text-heavy documents
 - Keep Architectural Decision Records close to the product/application.
