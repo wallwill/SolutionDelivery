@@ -3,6 +3,7 @@ theme:
   name: material
 Nav:
 -Home: index.md
+-Design: design.md
 -Process : process.md 
 -Assessment : assessment.md
 -Diagrams :  diagrams.md
@@ -11,3 +12,5 @@ Nav:
 -Adrs: adrs.md
 -Cloud: cloudArch.md
 -Influence: influence.md
+-Stakeholders: stakeholders.md
+-ETA: eta.md
