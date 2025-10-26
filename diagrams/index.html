@@ -9,7 +9,7 @@
       
       
       
-        <link rel="prev" href="../communications/">
+        <link rel="prev" href="../design/">
       
       
         <link rel="next" href="../duties/">
@@ -25,6 +25,9 @@
     
     
       <link rel="stylesheet" href="../assets/stylesheets/main.342714a4.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
       
       
 
@@ -53,7 +56,14 @@
   </head>
   
   
-    <body dir="ltr">
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="teal">
   
     
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
@@ -105,6 +115,24 @@
       </div>
     </div>
     
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="teal"  aria-hidden="true"  type="radio" name="__palette" id="__palette_0">
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="blue" data-md-color-accent="cyan"  aria-hidden="true"  type="radio" name="__palette" id="__palette_1">
+    
+  
+</form>
+      
+    
     
       <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
     
@@ -134,6 +162,8 @@
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
         </button>
       </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
       
     </form>
     <div class="md-search__output">
@@ -174,7 +204,9 @@
 
 
 
-<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  
+
+<nav class="md-nav md-nav--primary md-nav--integrated" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
     <a href=".." title="Practical Solution Delivery" class="md-nav__button md-logo" aria-label="Practical Solution Delivery" data-md-component="logo">
       
@@ -288,6 +320,28 @@
   
   <span class="md-ellipsis">
     Communications
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../design/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Reference Architectures and Design Patterns
     
   </span>
   
@@ -477,6 +531,28 @@
   
   
     <li class="md-nav__item">
+      <a href="../eta/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Enterprise Technical Architecture, Technology Inventories, and Technical Debt Management
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../influence/" class="md-nav__link">
         
   
@@ -526,7 +602,29 @@
   
   
   <span class="md-ellipsis">
-    Solution Intent Template
+    The Solution Intent Document (SID)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../stakeholders/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Stakeholder Management for Solution Architects
     
   </span>
   
@@ -543,119 +641,6 @@
               </div>
             
             
-              
-              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
-                <div class="md-sidebar__scrollwrap">
-                  <div class="md-sidebar__inner">
-                    
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#theme-4-rs" class="md-nav__link">
-    <span class="md-ellipsis">
-      Theme: 4 R's
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#diagram-families" class="md-nav__link">
-    <span class="md-ellipsis">
-      Diagram Families
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Diagram Families">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#c4" class="md-nav__link">
-    <span class="md-ellipsis">
-      C4
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#uml" class="md-nav__link">
-    <span class="md-ellipsis">
-      UML
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#er" class="md-nav__link">
-    <span class="md-ellipsis">
-      ER
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#dfd" class="md-nav__link">
-    <span class="md-ellipsis">
-      DFD
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#cloud-diagrams" class="md-nav__link">
-    <span class="md-ellipsis">
-      Cloud Diagrams
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#audiences" class="md-nav__link">
-    <span class="md-ellipsis">
-      Audiences
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#published-diagram-must-haves" class="md-nav__link">
-    <span class="md-ellipsis">
-      Published Diagram Must-Haves
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-                  </div>
-                </div>
-              </div>
-            
           
           
             <div class="md-content" data-md-component="content">
@@ -665,41 +650,41 @@
 
 
 
-<h1 id="diagram-standards">Diagram Standards</h1>
+<h1 id="diagram-standards">Diagram Standards<a class="headerlink" href="#diagram-standards" title="Permanent link">&para;</a></h1>
 <p>Inherit any Enterprise standards. However, these standards are often high-level, and implementation teams require more granularity with respect to standards and guidelines.</p>
 <p>This page will be a living document that advocates for diagrams we will produce for each scope.</p>
-<h2 id="theme-4-rs">Theme: 4 R's</h2>
+<h2 id="theme-4-rs">Theme: 4 R's<a class="headerlink" href="#theme-4-rs" title="Permanent link">&para;</a></h2>
 <ul>
 <li><strong>Right Diagram</strong></li>
 <li><strong>Right Audience</strong></li>
 <li><strong>Right Channel/Method</strong></li>
 <li><strong>Right Time</strong></li>
 </ul>
-<h2 id="diagram-families">Diagram Families</h2>
+<h2 id="diagram-families">Diagram Families<a class="headerlink" href="#diagram-families" title="Permanent link">&para;</a></h2>
 <p>Selecting the right diagram is a skill in itself. There are several diagram families to choose from. The most frequently used are listed below. Hopefully you can rely on the skill of your architects to judge the right diagram type for the right audience that conveys the right level of information at the right time. (See 4 R's above)</p>
 <p><strong>Note:</strong> This is not meant to be a prescriptive list, but rather a listing of the most frequently used diagrams.</p>
-<h3 id="c4">C4</h3>
+<h3 id="c4">C4<a class="headerlink" href="#c4" title="Permanent link">&para;</a></h3>
 <ul>
 <li><strong>System Context Diagram</strong></li>
 <li><strong>Container Diagram</strong></li>
 </ul>
-<h3 id="uml">UML</h3>
+<h3 id="uml">UML<a class="headerlink" href="#uml" title="Permanent link">&para;</a></h3>
 <ul>
 <li><strong>Component Diagram</strong></li>
 <li><strong>Sequence Diagram</strong></li>
 </ul>
-<h3 id="er">ER</h3>
-<h3 id="dfd">DFD</h3>
+<h3 id="er">ER<a class="headerlink" href="#er" title="Permanent link">&para;</a></h3>
+<h3 id="dfd">DFD<a class="headerlink" href="#dfd" title="Permanent link">&para;</a></h3>
 <ul>
 <li><strong>Level 0</strong></li>
 <li><strong>Level 1</strong></li>
 </ul>
-<h3 id="cloud-diagrams">Cloud Diagrams</h3>
+<h3 id="cloud-diagrams">Cloud Diagrams<a class="headerlink" href="#cloud-diagrams" title="Permanent link">&para;</a></h3>
 <ul>
 <li><strong>Hybrid</strong></li>
 <li><strong>Context Dependent</strong></li>
 </ul>
-<h2 id="audiences">Audiences</h2>
+<h2 id="audiences">Audiences<a class="headerlink" href="#audiences" title="Permanent link">&para;</a></h2>
 <ul>
 <li>US Leadership</li>
 <li>Irish Leadership</li>
@@ -709,7 +694,7 @@
 <li>Software Engineers</li>
 <li>Data Engineers</li>
 </ul>
-<h2 id="published-diagram-must-haves">Published Diagram Must-Haves</h2>
+<h2 id="published-diagram-must-haves">Published Diagram Must-Haves<a class="headerlink" href="#published-diagram-must-haves" title="Permanent link">&para;</a></h2>
 <ul>
 <li>Legend</li>
 <li>Standard Icons (if CSP)</li>
@@ -765,7 +750,7 @@
     
     
       
-      <script id="__config" type="application/json">{"base": "..", "features": [], "search": "../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"base": "..", "features": ["navigation.instant", "content.code.copy", "search.suggest", "toc.integrate"], "search": "../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
       <script src="../assets/javascripts/bundle.13a4f30d.min.js"></script>

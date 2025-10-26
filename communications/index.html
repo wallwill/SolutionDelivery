@@ -12,7 +12,7 @@
         <link rel="prev" href="../cloudArch/">
       
       
-        <link rel="next" href="../diagrams/">
+        <link rel="next" href="../design/">
       
       
       <link rel="icon" href="../assets/images/favicon.png">
@@ -25,6 +25,9 @@
     
     
       <link rel="stylesheet" href="../assets/stylesheets/main.342714a4.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
       
       
 
@@ -53,7 +56,14 @@
   </head>
   
   
-    <body dir="ltr">
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="teal">
   
     
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
@@ -105,6 +115,24 @@
       </div>
     </div>
     
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="teal"  aria-hidden="true"  type="radio" name="__palette" id="__palette_0">
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="blue" data-md-color-accent="cyan"  aria-hidden="true"  type="radio" name="__palette" id="__palette_1">
+    
+  
+</form>
+      
+    
     
       <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
     
@@ -134,6 +162,8 @@
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
         </button>
       </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
       
     </form>
     <div class="md-search__output">
@@ -174,7 +204,9 @@
 
 
 
-<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  
+
+<nav class="md-nav md-nav--primary md-nav--integrated" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
     <a href=".." title="Practical Solution Delivery" class="md-nav__button md-logo" aria-label="Practical Solution Delivery" data-md-component="logo">
       
@@ -423,6 +455,28 @@
   
   
     <li class="md-nav__item">
+      <a href="../design/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Reference Architectures and Design Patterns
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../diagrams/" class="md-nav__link">
         
   
@@ -451,6 +505,28 @@
   
   <span class="md-ellipsis">
     Scope and Responsibilities - General
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../eta/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Enterprise Technical Architecture, Technology Inventories, and Technical Debt Management
     
   </span>
   
@@ -516,7 +592,29 @@
   
   
   <span class="md-ellipsis">
-    Solution Intent Template
+    The Solution Intent Document (SID)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../stakeholders/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Stakeholder Management for Solution Architects
     
   </span>
   
@@ -533,111 +631,6 @@
               </div>
             
             
-              
-              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
-                <div class="md-sidebar__scrollwrap">
-                  <div class="md-sidebar__inner">
-                    
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#objectives-alignment" class="md-nav__link">
-    <span class="md-ellipsis">
-      Objectives Alignment
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#audience-segmentation" class="md-nav__link">
-    <span class="md-ellipsis">
-      Audience Segmentation
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#platform-selection" class="md-nav__link">
-    <span class="md-ellipsis">
-      Platform Selection
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#timing-considerations" class="md-nav__link">
-    <span class="md-ellipsis">
-      Timing Considerations
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#when-to-use-each-platform" class="md-nav__link">
-    <span class="md-ellipsis">
-      When to Use Each Platform
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#why-use-each-platform" class="md-nav__link">
-    <span class="md-ellipsis">
-      Why Use Each Platform
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#pull-versus-push-strategies" class="md-nav__link">
-    <span class="md-ellipsis">
-      Pull versus Push Strategies
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#training-and-support" class="md-nav__link">
-    <span class="md-ellipsis">
-      Training and Support
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#feedback-and-iteration" class="md-nav__link">
-    <span class="md-ellipsis">
-      Feedback and Iteration
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-                  </div>
-                </div>
-              </div>
-            
           
           
             <div class="md-content" data-md-component="content">
@@ -649,43 +642,43 @@
 
   <h1>Communications</h1>
 
-<h2 id="objectives-alignment">Objectives Alignment</h2>
+<h2 id="objectives-alignment">Objectives Alignment<a class="headerlink" href="#objectives-alignment" title="Permanent link">&para;</a></h2>
 <p>Ensure alignment of communication efforts with the overarching goals of focusing on promoting alignment between business and technology strategies and facilitating efficient solution delivery, while considering the global audience's needs.</p>
-<h2 id="audience-segmentation">Audience Segmentation</h2>
+<h2 id="audience-segmentation">Audience Segmentation<a class="headerlink" href="#audience-segmentation" title="Permanent link">&para;</a></h2>
 <p>Recognize the diversity within the global audience, considering different time zones, cultural backgrounds, and communication preferences. Segment the audience into:</p>
 <ul>
 <li>Executives responsible for business and technology strategy</li>
 <li>Delivery teams involved in solution implementation</li>
 </ul>
-<h2 id="platform-selection">Platform Selection</h2>
+<h2 id="platform-selection">Platform Selection<a class="headerlink" href="#platform-selection" title="Permanent link">&para;</a></h2>
 <ul>
 <li><strong>SharePoint:</strong> Use SharePoint, where appropriate, as a centralized repository for EA artifacts relating to IP/R&amp;D, ensuring accessibility to all global teams. Organize information logically and provide clear navigation for easy access.</li>
-<li><strong>Confluence Wiki:</strong> Utilize Confluence Wiki for collaborative documentation, enabling teams across time zones to contribute asynchronously. Foster a culture of knowledge sharing and transparency.</li>
+<li><strong>Wiki:</strong> Utilize a Wiki for collaborative documentation, enabling teams across time zones to contribute asynchronously. Foster a culture of knowledge sharing and transparency.</li>
 <li><strong>Microsoft Teams:</strong> Leverage Teams for real-time collaboration and discussions, but be mindful of scheduling meetings across time zones. Encourage the use of asynchronous communication features such as chat and threaded discussions.</li>
 <li><strong>Email:</strong> Reserve email for formal communications and important updates, considering the appropriate timing to reach a global audience effectively.</li>
 </ul>
-<h2 id="timing-considerations">Timing Considerations</h2>
+<h2 id="timing-considerations">Timing Considerations<a class="headerlink" href="#timing-considerations" title="Permanent link">&para;</a></h2>
 <ul>
 <li>Schedule synchronous meetings and real-time discussions at times that accommodate the majority of the global audience, rotating meeting times periodically to ensure inclusivity.</li>
 <li>Encourage asynchronous communication for non-urgent matters, allowing team members to contribute and respond at their convenience.</li>
 </ul>
-<h2 id="when-to-use-each-platform">When to Use Each Platform</h2>
+<h2 id="when-to-use-each-platform">When to Use Each Platform<a class="headerlink" href="#when-to-use-each-platform" title="Permanent link">&para;</a></h2>
 <ul>
-<li><strong>SharePoint and Confluence Wiki:</strong> Provide 24/7 access to documentation and resources, allowing teams to collaborate and access information at any time suitable for them.</li>
+<li><strong>SharePoint and Wiki:</strong> Provide 24/7 access to documentation and resources, allowing teams to collaborate and access information at any time suitable for them.</li>
 <li><strong>Microsoft Teams:</strong> Utilize for both synchronous and asynchronous communication, leveraging features such as chat, channels, and threaded discussions to facilitate ongoing collaboration across time zones.</li>
 <li><strong>Email:</strong> Use email for formal announcements, updates, and important notifications, considering the timing to reach the widest possible audience effectively.</li>
 </ul>
-<h2 id="why-use-each-platform">Why Use Each Platform</h2>
+<h2 id="why-use-each-platform">Why Use Each Platform<a class="headerlink" href="#why-use-each-platform" title="Permanent link">&para;</a></h2>
 <ul>
-<li><strong>SharePoint and Confluence Wiki:</strong> Serve as accessible repositories for documentation and resources, enabling global teams to collaborate and access information at their convenience.</li>
+<li><strong>SharePoint and  Wiki:</strong> Serve as accessible repositories for documentation and resources, enabling global teams to collaborate and access information at their convenience.</li>
 <li><strong>Microsoft Teams:</strong> Facilitate real-time collaboration and discussions, bridging the gap between geographically dispersed teams and fostering a sense of connectedness.</li>
 <li><strong>Email:</strong> Provide a formal channel for important communications, ensuring that critical updates reach all stakeholders regardless of time zone differences.</li>
 </ul>
-<h2 id="pull-versus-push-strategies">Pull versus Push Strategies</h2>
+<h2 id="pull-versus-push-strategies">Pull versus Push Strategies<a class="headerlink" href="#pull-versus-push-strategies" title="Permanent link">&para;</a></h2>
 <p>Encourage a balanced approach between pull and push strategies, allowing team members to access information on SharePoint and Confluence Wiki at their convenience while using Microsoft Teams and email for timely updates and notifications.</p>
-<h2 id="training-and-support">Training and Support</h2>
+<h2 id="training-and-support">Training and Support<a class="headerlink" href="#training-and-support" title="Permanent link">&para;</a></h2>
 <p>Provide training and resources on effective asynchronous communication and time management techniques, emphasizing the importance of inclusivity and collaboration across time zones.</p>
-<h2 id="feedback-and-iteration">Feedback and Iteration</h2>
+<h2 id="feedback-and-iteration">Feedback and Iteration<a class="headerlink" href="#feedback-and-iteration" title="Permanent link">&para;</a></h2>
 <p>Solicit feedback from the global audience regularly to evaluate the effectiveness of the communication strategy, making adjustments as needed to better accommodate the diverse needs of teams across different time zones.</p>
 
 
@@ -735,7 +728,7 @@
     
     
       
-      <script id="__config" type="application/json">{"base": "..", "features": [], "search": "../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"base": "..", "features": ["navigation.instant", "content.code.copy", "search.suggest", "toc.integrate"], "search": "../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
       <script src="../assets/javascripts/bundle.13a4f30d.min.js"></script>
